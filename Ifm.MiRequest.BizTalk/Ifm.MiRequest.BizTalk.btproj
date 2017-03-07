@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6EF1C507-52D8-424C-9785-6C3CF1484031}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>Ifm.MiRequest.BizTalk</RootNamespace>
+    <AssemblyName>Ifm.MiRequest.BizTalk</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MFM.Lbg.Schemas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b52a4a519c43e251, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibraries\MFM.Lbg.Schemas.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft BizTalk Server 2013\Pipeline Components\Microsoft.BizTalk.Pipeline.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="MTFM.1TEAM.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fdf8d2e977c78a96, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MTFM.1TEAM.Services\MTFM.1TEAM.Services\bin\Debug\MTFM.1TEAM.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="MTFM.MiAMI.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=40dbbfe7909218a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MTFM.MiAMI.Services\MTFM.MiAMI.Services\bin\Debug\MTFM.MiAMI.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Maps\DocumentLoadResponse_to_AddDocumentResponse.btm.cs" />
+    <Compile Include="Maps\Dummy_MaximoResponse.btm.cs" />
+    <Compile Include="Maps\GetMiamiSrAttachment.btm.cs" />
+    <Compile Include="Maps\GetRrAttachment.btm.cs" />
+    <Compile Include="Maps\MapDummyTaskEnquiryResponse.btm.cs" />
+    <Compile Include="Maps\MiamiSrLog_To_PortalUpd.btm.cs" />
+    <Compile Include="Maps\MIAMISRQueryResponse_To_TaskResponse.btm.cs" />
+    <Compile Include="Maps\MiamiSRUpdate.btm.cs" />
+    <Compile Include="Maps\MiAMI_to_PortalLatestLog.btm.cs" />
+    <Compile Include="Maps\MiAMI_to_PortalOther.btm.cs" />
+    <Compile Include="Maps\MiAMI_to_PortalReason.btm.cs" />
+    <Compile Include="Maps\MiAMI_to_PortalStatus.btm.cs" />
+    <Compile Include="Maps\MiAMI_to_PortalUpdate.btm.cs" />
+    <Compile Include="Maps\PersonRequest_to_RrCreatePerson.btm.cs" />
+    <Compile Include="Maps\PostDocument_to_MiamiDocument.btm.cs" />
+    <Compile Include="Maps\RequestPersonDummyResponse.btm.cs" />
+    <Compile Include="Maps\RequestUpdateDummyResponse.btm.cs" />
+    <Compile Include="Maps\RrSrQuertResponse_to_TaskEnquiryResponse.btm.cs" />
+    <Compile Include="Maps\RrUpdateToAdhocWorkflow.btm.cs" />
+    <Compile Include="Maps\Rr_ro_PortalStatus.btm.cs" />
+    <Compile Include="Maps\Rr_to_PortalLatestLog.btm.cs" />
+    <Compile Include="Maps\TaskEnquiry_to_1teamSrQuery.btm.cs" />
+    <Compile Include="Maps\TaskEnquiry_To_MiamiQuerySrByTicketId.btm.cs" />
+    <Compile Include="Maps\TaskEnquiry_To_MiamiQueryWoByWonum.btm.cs" />
+    <Compile Include="Maps\TaskListQuery_To_MiamiQueryWoByUser.btm.cs" />
+    <Compile Include="Maps\TaskRequest_To_MiamiCreateOrder.btm.cs" />
+    <Compile Include="Maps\TaskRequest_To_MiamiCreateSr.btm.cs" />
+    <Compile Include="Maps\TaskRequest_To_RRCreateSr.btm.cs" />
+    <Compile Include="Maps\TaskUpdateRequestToRrCreateUpdate.btm.cs" />
+    <Compile Include="Maps\TaskUpdateRequestToRrStatusUpdate.btm.cs" />
+    <Compile Include="Maps\WoListResponse_To_TaskListQueryResponse.btm.cs" />
+    <Compile Include="Maps\WoQueryResponse_To_TaskResponse.btm.cs" />
+    <Compile Include="Pipelines\RestfulMethodHandler.btp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schema\AddDocument.xsd.cs" />
+    <Compile Include="Schema\AdhocWorkflow.xsd.cs" />
+    <Compile Include="Schema\LocationQuery.xsd.cs" />
+    <Compile Include="Schema\LocationsQuery_Prop.xsd.cs" />
+    <Compile Include="Schema\miworldcolleaguerequestupd.xsd.cs" />
+    <Compile Include="Schema\NewPersonRequest.xsd.cs" />
+    <Compile Include="Schema\PortalLightweightUpdate.xsd.cs" />
+    <Compile Include="Schema\TaskEnquiry.xsd.cs" />
+    <Compile Include="Schema\TaskEnquiry_Prop.xsd.cs" />
+    <Compile Include="Schema\TaskListQuery.xsd.cs" />
+    <Compile Include="Schema\TaskListQuery_Prop.xsd.cs" />
+    <Compile Include="Schema\TaskLoader.xsd.cs" />
+    <Compile Include="Schema\TaskLoader_Prop.xsd.cs" />
+    <Compile Include="Schema\TaskUpdate.xsd.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="Maps\DocumentLoadResponse_to_AddDocumentResponse.btm">
+      <TypeName>DocumentLoadResponse_to_AddDocumentResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Designer</SubType>
+    </Map>
+    <Map Include="Maps\Dummy_MaximoResponse.btm">
+      <TypeName>Dummy_MaximoResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\GetMiamiSrAttachment.btm">
+      <TypeName>GetMiamiSrAttachment</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\GetRrAttachment.btm">
+      <TypeName>GetRrAttachment</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MapDummyTaskEnquiryResponse.btm">
+      <TypeName>MapDummyTaskEnquiryResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiamiSrLog_To_PortalUpd.btm">
+      <TypeName>MiamiSrLog_To_PortalUpd</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MIAMISRQueryResponse_To_TaskResponse.btm">
+      <TypeName>MIAMISRQueryResponse_To_TaskResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiamiSRUpdate.btm">
+      <TypeName>MiamiSRUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiAMI_to_PortalLatestLog.btm">
+      <TypeName>MiAMI_to_PortalLatestLog</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiAMI_to_PortalOther.btm">
+      <TypeName>MiAMI_to_PortalOther</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiAMI_to_PortalReason.btm">
+      <TypeName>MiAMI_to_PortalReason</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiAMI_to_PortalStatus.btm">
+      <TypeName>MiAMI_to_PortalStatus</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\MiAMI_to_PortalUpdate.btm">
+      <TypeName>MiAMI_to_PortalUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\PersonRequest_to_RrCreatePerson.btm">
+      <TypeName>PersonRequest_to_RrCreatePerson</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\PostDocument_to_MiamiDocument.btm">
+      <TypeName>PostDocument_to_MiamiDocument</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\RequestPersonDummyResponse.btm">
+      <TypeName>RequestPersonDummyResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\RequestUpdateDummyResponse.btm">
+      <TypeName>RequestUpdateDummyResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\RrSrQuertResponse_to_TaskEnquiryResponse.btm">
+      <TypeName>RrSrQuertResponse_to_TaskEnquiryResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\RrUpdateToAdhocWorkflow.btm">
+      <TypeName>RrUpdateToAdhocWorkflow</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\Rr_ro_PortalStatus.btm">
+      <TypeName>Rr_ro_PortalStatus</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\Rr_to_PortalLatestLog.btm">
+      <TypeName>Rr_to_PortalLatestLog</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskEnquiry_to_1teamSrQuery.btm">
+      <TypeName>TaskEnquiry_to_1teamSrQuery</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskEnquiry_To_MiamiQuerySrByTicketId.btm">
+      <TypeName>TaskEnquiry_To_MiamiQuerySrByTicketId</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskEnquiry_To_MiamiQueryWoByWonum.btm">
+      <TypeName>TaskEnquiry_To_MiamiQueryWoByWonum</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskListQuery_To_MiamiQueryWoByUser.btm">
+      <TypeName>TaskListQuery_To_MiamiQueryWoByUser</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskRequest_To_MiamiCreateOrder.btm">
+      <TypeName>TaskRequest_To_MiamiCreateOrder</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskRequest_To_MiamiCreateSr.btm">
+      <TypeName>TaskRequest_To_MiamiCreateSr</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskRequest_To_RRCreateSr.btm">
+      <TypeName>TaskRequest_To_RRCreateSr</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskUpdateRequestToRrCreateUpdate.btm">
+      <TypeName>TaskUpdateRequestToRrCreateUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\TaskUpdateRequestToRrStatusUpdate.btm">
+      <TypeName>TaskUpdateRequestToRrStatusUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\WoListResponse_To_TaskListQueryResponse.btm">
+      <TypeName>WoListResponse_To_TaskListQueryResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+    <Map Include="Maps\WoQueryResponse_To_TaskResponse.btm">
+      <TypeName>WoQueryResponse_To_TaskResponse</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Maps</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="Orcs\ErrorHandler.odx">
+      <TypeName>ErrorHandler</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\GetLocationsList.odx">
+      <TypeName>GetLocationsList</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\GetTaskList.odx">
+      <TypeName>GetTaskList</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\GetTaskStatus.odx">
+      <TypeName>GetTaskStatus</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\MiAMILogs.odx">
+      <TypeName>MiAMILogs</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\MiamiSrLogs.odx">
+      <TypeName>MiamiSrLogs</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\MiamiSrUpdates.odx">
+      <TypeName>MiamiSrUpdates</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\MiAMIUpdates.odx">
+      <TypeName>MiAMIUpdates</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\PostAdhocWorkflow.odx">
+      <TypeName>PostAdhocWorkflow</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\PostDocument.odx">
+      <TypeName>PostDocument</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\PostPerson.odx">
+      <TypeName>PostPerson</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\PostServiceRequest.odx">
+      <TypeName>PostServiceRequest</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\PostUpdate.odx">
+      <TypeName>PostUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\PutTaskMaximo.odx">
+      <TypeName>PutTaskMaximo</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\RrLogs.odx">
+      <TypeName>RrLogs</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+    <XLang Include="Orcs\RrUpdates.odx">
+      <TypeName>RrUpdates</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Orcs</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="Pipelines\RestfulMethodHandler.btp">
+      <TypeName>RestfulMethodHandler</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Pipelines</Namespace>
+      <SubType>Task</SubType>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="Schema\AddDocument.xsd">
+      <TypeName>AddDocument</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\AdhocWorkflow.xsd">
+      <TypeName>AdhocWorkflow</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\LocationQuery.xsd">
+      <TypeName>LocationQuery</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\LocationsQuery_Prop.xsd">
+      <TypeName>LocationsQuery_Prop</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\miworldcolleaguerequestupd.xsd">
+      <TypeName>miworldcolleaguerequestupd</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\NewPersonRequest.xsd">
+      <TypeName>NewPersonRequest</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\PortalLightweightUpdate.xsd">
+      <TypeName>PortalLightweightUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskEnquiry.xsd">
+      <TypeName>TaskEnquiry</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskEnquiry_Prop.xsd">
+      <TypeName>TaskEnquiry_Prop</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskListQuery.xsd">
+      <TypeName>TaskListQuery</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskListQuery_Prop.xsd">
+      <TypeName>TaskListQuery_Prop</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskLoader.xsd">
+      <TypeName>TaskLoader</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskLoader_Prop.xsd">
+      <TypeName>TaskLoader_Prop</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="Schema\TaskUpdate.xsd">
+      <TypeName>TaskUpdate</TypeName>
+      <Namespace>Ifm.MiRequest.BizTalk.Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ifm.MiRequest.Helper\Ifm.MiRequest.Helper.csproj">
+      <Project>{02e75066-ebe9-483c-90e9-1cd22960a481}</Project>
+      <Name>Ifm.MiRequest.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ifm.MiRequest.RestComponent\Ifm.MiRequest.RestComponent.csproj">
+      <Project>{df4a10d9-3c7e-4c83-a998-f78ca2a5e408}</Project>
+      <Name>Ifm.MiRequest.RestComponent</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

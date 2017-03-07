@@ -1,0 +1,459 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="784871c7-ed29-4f74-bc37-0f44a9e2fe57" LowerBound="1.1" HigherBound="117.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="ac603ee4-3fba-4b38-a1ba-5994c291845b" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="116.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PostAdhocWorkflow" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="1326d16d-4450-47f9-ba56-22eed0baf4d4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="12.1" HigherBound="13.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotificationXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="89f55d0f-aaf1-44d2-89f3-16b271975e8a" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="13.1" HigherBound="14.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchiveFileName" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="816d120a-1088-49a0-9f92-180acaf8e3a4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="36ebf1d2-7a26-4977-8e6c-0bd21d6689cc" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="15.1" HigherBound="16.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="chargedept" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="a3c4cad1-ea78-47d9-b666-232f43c4609b" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="buscase" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="247a95f4-cd84-4dfe-9490-d01773314607" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AdhocResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="f3b4cd33-8b7d-4c1c-865e-96b1d2d6ec68" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Retry" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="7f84f264-f65c-4d54-b61e-eb929574e617" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MaxRetry" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="12e83c44-5185-440e-8041-c60404234876" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RetryCount" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1d3ea22c-4688-4f22-a78a-2075d6afb3e6" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RetryDelay" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="d3ed33bf-d133-45d6-a321-81e65ba947b3" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TempXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="ea686a8f-99b9-4aa8-bf7d-d3a426ec40dd" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="InitialValue" Value="false" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Error" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="2d504172-503d-4f0e-802a-a856235f339d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ErrorMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="5368087c-7abc-4066-b582-b61194575cee" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="schemeno" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="fc9ce1e2-6404-49cd-8dc9-e9ea530845ba" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailBody" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="cd02e20f-bd99-4d40-9f3d-296ecc295194" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="9.1" HigherBound="10.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Notification" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="d2030897-f8d4-4224-868a-3a542f52b109" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.MitieRrUpdateResp" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="rrAddWorkLogResp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="118ae54f-3baa-4f7d-a538-eb0e23c50f08" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="rrAddWorkLog" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="22ffd3db-af7d-47dc-96c3-20568d45704b" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="65d3909b-5c4b-4e71-87ac-3e42b0995e25" ParentLink="ServiceBody_Declaration" LowerBound="27.15" HigherBound="27.93">
+                    <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RrUpd" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageDeclaration" OID="7e69fce8-434a-451c-9d07-d76bb60a5213" ParentLink="ServiceBody_Declaration" LowerBound="27.95" HigherBound="27.137">
+                    <om:Property Name="Type" Value="IFM.MiRequest.Schema.AdhocWorkflow" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="AdhocWorkflow" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="fb0aaaa2-fa09-4d9a-94bb-180324d058ac" ParentLink="ServiceBody_Statement" LowerBound="41.1" HigherBound="47.1">
+                    <om:Property Name="Expression" Value="MaxRetry = MFM.Colleague.Helper.AdhocWorkflowClient.GetMaxRetry();&#xD;&#xA;RetryDelay = MFM.Colleague.Helper.AdhocWorkflowClient.GetRetryDelayMin();&#xD;&#xA;RetryCount = 0;&#xD;&#xA;Retry = true;&#xD;&#xA;Error = false;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Set Variables" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="While" OID="18989406-7ed0-4415-b3b8-c2c43c5ffb20" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="88.1">
+                    <om:Property Name="Expression" Value="Retry == true &amp;&amp; RetryCount &lt; MaxRetry" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Retry Loop" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Scope" OID="5d3a018b-de2f-455c-9bf9-45e09c74b9de" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="87.1">
+                        <om:Property Name="InitializedTransactionType" Value="True" />
+                        <om:Property Name="IsSynchronized" Value="False" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Try Call Web Service" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="VariableAssignment" OID="e61d6193-de67-4b57-a007-51e40db4409f" ParentLink="ComplexStatement_Statement" LowerBound="55.1" HigherBound="63.1">
+                            <om:Property Name="Expression" Value="//Add support for null value business case and scheme no&#xD;&#xA;buscase = xpath(AdhocWorkflow,&quot;string(/*[local-name()='AdhocWorkflow' and namespace-uri()='http://IFM.MiRequest.AdhocWorkflow']/*[local-name()='Workflow' and namespace-uri()='']/*[local-name()='BusinessCase' and namespace-uri()=''])&quot;);&#xD;&#xA;schemeno = xpath(AdhocWorkflow,&quot;string(/*[local-name()='AdhocWorkflow' and namespace-uri()='http://IFM.MiRequest.AdhocWorkflow']/*[local-name()='Workflow' and namespace-uri()='']/*[local-name()='SchemeNo' and namespace-uri()=''])&quot;);&#xD;&#xA;chargedept = xpath(AdhocWorkflow,&quot;string(/*[local-name()='AdhocWorkflow' and namespace-uri()='http://IFM.MiRequest.AdhocWorkflow']/*[local-name()='Workflow' and namespace-uri()='']/*[local-name()='ChargeDept' and namespace-uri()=''])&quot;);&#xD;&#xA;AdhocResponse = MFM.Colleague.Helper.AdhocWorkflowClient.CreateWorkflowListItem(AdhocWorkflow.Workflow.SRNumber,AdhocWorkflow.Workflow.Name,AdhocWorkflow.Workflow.Phone,AdhocWorkflow.Workflow.Email,AdhocWorkflow.Workflow.Summary,AdhocWorkflow.Workflow.Details,AdhocWorkflow.Workflow.WODetailsPersonGroup,AdhocWorkflow.Workflow.Location, chargedept, schemeno, AdhocWorkflow.Routing.Source, buscase);&#xD;&#xA;Retry = false;&#xD;&#xA;Error = false;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Call Web Service" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Construct" OID="0f1579fe-42da-49e3-9571-1739b15ed05b" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="70.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct Work Log" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="cc350305-26d8-4213-b995-cf55733c1245" ParentLink="ComplexStatement_Statement" LowerBound="66.1" HigherBound="69.1">
+                                <om:Property Name="Expression" Value="TempXml.LoadXml(&quot;&lt;ns0:UpdateRRMISR xmlns:ns0='http://www.ibm.com/maximo'&gt; &lt;ns0:RRMISRSet&gt; &lt;ns0:SR action='Change'&gt; &lt;ns0:CLASS&gt;SR&lt;/ns0:CLASS&gt; &lt;ns0:TICKETID&gt;&quot; + AdhocWorkflow.Workflow.SRNumber + &quot;&lt;/ns0:TICKETID&gt; &lt;ns0:WORKLOG action='Add'&gt; &lt;ns0:DESCRIPTION&gt;ADHOC Workflow request sent&lt;/ns0:DESCRIPTION&gt; &lt;ns0:DESCRIPTION_LONGDESCRIPTION&gt;ADHOC Workflow response: &quot; + AdhocResponse + &quot;&lt;/ns0:DESCRIPTION_LONGDESCRIPTION&gt; &lt;/ns0:WORKLOG&gt; &lt;/ns0:SR&gt; &lt;/ns0:RRMISRSet&gt; &lt;/ns0:UpdateRRMISR&gt;&quot;);&#xD;&#xA;rrAddWorkLog.parameters = TempXml;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="MessageAssignment_WorkLog" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="aff663b6-38d3-4aed-a3f2-9d8cecc3f65e" ParentLink="Construct_MessageRef" LowerBound="64.35" HigherBound="64.47">
+                                <om:Property Name="Ref" Value="rrAddWorkLog" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Catch" OID="fe2b16f7-ea88-4aab-b7ec-1830fdd73308" ParentLink="Scope_Catch" LowerBound="73.1" HigherBound="85.1">
+                            <om:Property Name="ExceptionName" Value="ex" />
+                            <om:Property Name="ExceptionType" Value="System.SystemException" />
+                            <om:Property Name="IsFaultMessage" Value="False" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CatchException" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="VariableAssignment" OID="7720dfdf-ed39-4bd3-a702-33a613c8927a" ParentLink="Catch_Statement" LowerBound="76.1" HigherBound="82.1">
+                                <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;IFM.MiRequest&quot;,&quot;General Fault returned from ADHOC workflow web service: &quot; + ex.Message,System.Diagnostics.EventLogEntryType.Error);&#xD;&#xA;Retry = true;&#xD;&#xA;RetryCount = RetryCount + 1;&#xD;&#xA;Error = true;&#xD;&#xA;ErrorMessage = ex.Message;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Handle Exception" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Delay" OID="a4d51a9b-ea9b-46b2-af12-91c093c0d9b7" ParentLink="Catch_Statement" LowerBound="82.1" HigherBound="84.1">
+                                <om:Property Name="Timeout" Value="new System.TimeSpan(0,0,0,MFM.Colleague.Helper.AdhocWorkflowClient.GetRetryDelaySecs());" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Delay" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="fdad9cd3-e382-4976-bfba-f2ba3abf3aa7" ParentLink="ServiceBody_Statement" LowerBound="88.1" HigherBound="114.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Error" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="5c94d139-8138-41ca-966f-3853b58cc641" ParentLink="ReallyComplexStatement_Branch" LowerBound="89.13" HigherBound="114.1">
+                        <om:Property Name="Expression" Value="Error == true" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Yes" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="e997bcac-082f-4cae-a550-526ae9cd79b9" ParentLink="ComplexStatement_Statement" LowerBound="91.1" HigherBound="96.1">
+                            <om:Property Name="Expression" Value="RequestXml = RrUpd;&#xD;&#xA;ErrorMessage = &quot;Failed to submit request to Adhoc workflow: &quot; + ErrorMessage;&#xD;&#xA;//make failed request parameter filename friendly&#xD;&#xA;ArchiveFileName = &quot;PublishRRMISRSTAT_&quot; + AdhocWorkflow.Workflow.SRNumber;&#xD;&#xA;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set Alert Vars" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="a48c7d38-8efd-4197-a935-ad80fb428c51" ParentLink="ComplexStatement_Statement" LowerBound="96.1" HigherBound="99.1">
+                            <om:Property Name="Expression" Value="EmailBody = System.String.Format(&quot;Adhoc Workflow.\r\n\r\nAction being attempted: {1} \r\n\r\nError Message: {0}&quot;, ErrorMessage, ArchiveFileName);&#xD;&#xA;&#xD;&#xA;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set Body" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="870b7a1f-6835-41cc-bd50-57930093d607" ParentLink="ComplexStatement_Statement" LowerBound="99.1" HigherBound="101.1">
+                            <om:Property Name="Expression" Value="NotificationXml.LoadXml(MFM.Colleague.Helper.EmailHelper.BuildAdhocEmailMessage(EmailBody,  ArchiveFileName + &quot;.xml&quot;, RequestXml, MFM.Colleague.Helper.EmailHelper.GetAdhocToEmail()));" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Assign to XML" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Construct" OID="02e86e0f-e6f1-47e1-a909-860a74d56db3" ParentLink="ComplexStatement_Statement" LowerBound="101.1" HigherBound="107.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Alert" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="e00c71c7-4939-4932-b3de-fee52725fefb" ParentLink="ComplexStatement_Statement" LowerBound="104.1" HigherBound="106.1">
+                                <om:Property Name="Expression" Value="Notification = NotificationXml;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="AssignAlert" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="1581a27a-32fb-4e13-aa6a-4a64605ceb17" ParentLink="Construct_MessageRef" LowerBound="102.27" HigherBound="102.39">
+                                <om:Property Name="Ref" Value="Notification" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="2c80025e-1728-4cd2-8dbb-3a14d11e9edf" ParentLink="ComplexStatement_Statement" LowerBound="107.1" HigherBound="109.1">
+                            <om:Property Name="PortName" Value="EmailAlerter" />
+                            <om:Property Name="MessageName" Value="Notification" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Alert" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Suspend" OID="1b4bcf52-2901-45a2-8ac2-57809c7838aa" ParentLink="ComplexStatement_Statement" LowerBound="109.1" HigherBound="111.1">
+                            <om:Property Name="ErrorMessage" Value="&quot;Failed to submit request to Adhoc workflow:&quot; + ErrorMessage;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Suspend" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Exec" OID="aa3e92f3-4a49-46e8-aa7a-3efb4e3ed868" ParentLink="ComplexStatement_Statement" LowerBound="111.1" HigherBound="113.1">
+                            <om:Property Name="Invokee" Value="IFM.MiRequest.PostAdhocWorkflow" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Retry_Recursive" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Parameter" OID="5a3ae95b-294e-42a2-a869-3f149afe991c" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="RrUpd" />
+                                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="ce7b0a0b-72ef-432f-a951-119206a72b3a" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="AdhocWorkflow" />
+                                <om:Property Name="Type" Value="IFM.MiRequest.Schema.AdhocWorkflow" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="d43f7f30-13e5-4bb5-af8b-eb99844f0dae" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="d77137aa-c0c7-42e7-9108-264a50d72b4f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="7.1" HigherBound="9.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="79" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.EmailAlerterType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailAlerter" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="DirectBindingAttribute" OID="5c4aaa1b-f457-4531-b95e-d696425734c0" ParentLink="PortDeclaration_CLRAttribute" LowerBound="7.1" HigherBound="8.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PostAdhocWorkflow
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses EmailAlerterType EmailAlerter;
+        message MSS.Notification.Service.MSSNotifyEmail Notification;
+        message MTFM._1TEAM.Services.Schemas.MitieRrUpdateResp rrAddWorkLogResp;
+        message MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest rrAddWorkLog;
+        System.Xml.XmlDocument NotificationXml;
+        System.String ArchiveFileName;
+        System.Xml.XmlDocument RequestXml;
+        System.String chargedept;
+        System.String buscase;
+        System.String AdhocResponse;
+        System.Boolean Retry;
+        System.Int32 MaxRetry;
+        System.Int32 RetryCount;
+        System.Int32 RetryDelay;
+        System.Xml.XmlDocument TempXml;
+        System.Boolean Error;
+        System.String ErrorMessage;
+        System.String schemeno;
+        System.String EmailBody;
+        body (message MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT RrUpd, message Schema.AdhocWorkflow AdhocWorkflow)
+        {
+            NotificationXml = new System.Xml.XmlDocument();
+            ArchiveFileName = "";
+            RequestXml = new System.Xml.XmlDocument();
+            chargedept = "";
+            buscase = "";
+            AdhocResponse = "";
+            Retry = true;
+            TempXml = new System.Xml.XmlDocument();
+            Error = false;
+            ErrorMessage = "";
+            schemeno = "";
+            EmailBody = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fb0aaaa2-fa09-4d9a-94bb-180324d058ac")]
+            MaxRetry = MFM.Colleague.Helper.AdhocWorkflowClient.GetMaxRetry();
+            RetryDelay = MFM.Colleague.Helper.AdhocWorkflowClient.GetRetryDelayMin();
+            RetryCount = 0;
+            Retry = true;
+            Error = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("18989406-7ed0-4415-b3b8-c2c43c5ffb20")]
+            while (Retry == true && RetryCount < MaxRetry)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5d3a018b-de2f-455c-9bf9-45e09c74b9de")]
+                scope
+                {
+                    body
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("e61d6193-de67-4b57-a007-51e40db4409f")]
+                        //Add support for null value business case and scheme no
+                        buscase = xpath(AdhocWorkflow,"string(/*[local-name()='AdhocWorkflow' and namespace-uri()='http://IFM.MiRequest.AdhocWorkflow']/*[local-name()='Workflow' and namespace-uri()='']/*[local-name()='BusinessCase' and namespace-uri()=''])");
+                        schemeno = xpath(AdhocWorkflow,"string(/*[local-name()='AdhocWorkflow' and namespace-uri()='http://IFM.MiRequest.AdhocWorkflow']/*[local-name()='Workflow' and namespace-uri()='']/*[local-name()='SchemeNo' and namespace-uri()=''])");
+                        chargedept = xpath(AdhocWorkflow,"string(/*[local-name()='AdhocWorkflow' and namespace-uri()='http://IFM.MiRequest.AdhocWorkflow']/*[local-name()='Workflow' and namespace-uri()='']/*[local-name()='ChargeDept' and namespace-uri()=''])");
+                        AdhocResponse = MFM.Colleague.Helper.AdhocWorkflowClient.CreateWorkflowListItem(AdhocWorkflow.Workflow.SRNumber,AdhocWorkflow.Workflow.Name,AdhocWorkflow.Workflow.Phone,AdhocWorkflow.Workflow.Email,AdhocWorkflow.Workflow.Summary,AdhocWorkflow.Workflow.Details,AdhocWorkflow.Workflow.WODetailsPersonGroup,AdhocWorkflow.Workflow.Location, chargedept, schemeno, AdhocWorkflow.Routing.Source, buscase);
+                        Retry = false;
+                        Error = false;
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("0f1579fe-42da-49e3-9571-1739b15ed05b")]
+                        construct rrAddWorkLog
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cc350305-26d8-4213-b995-cf55733c1245")]
+                            TempXml.LoadXml("<ns0:UpdateRRMISR xmlns:ns0='http://www.ibm.com/maximo'> <ns0:RRMISRSet> <ns0:SR action='Change'> <ns0:CLASS>SR</ns0:CLASS> <ns0:TICKETID>" + AdhocWorkflow.Workflow.SRNumber + "</ns0:TICKETID> <ns0:WORKLOG action='Add'> <ns0:DESCRIPTION>ADHOC Workflow request sent</ns0:DESCRIPTION> <ns0:DESCRIPTION_LONGDESCRIPTION>ADHOC Workflow response: " + AdhocResponse + "</ns0:DESCRIPTION_LONGDESCRIPTION> </ns0:WORKLOG> </ns0:SR> </ns0:RRMISRSet> </ns0:UpdateRRMISR>");
+                            rrAddWorkLog.parameters = TempXml;
+                        }
+                    }
+                    exceptions
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("fe2b16f7-ea88-4aab-b7ec-1830fdd73308")]
+                        catch (System.SystemException ex)
+                        {
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7720dfdf-ed39-4bd3-a702-33a613c8927a")]
+                            System.Diagnostics.EventLog.WriteEntry("IFM.MiRequest","General Fault returned from ADHOC workflow web service: " + ex.Message,System.Diagnostics.EventLogEntryType.Error);
+                            Retry = true;
+                            RetryCount = RetryCount + 1;
+                            Error = true;
+                            ErrorMessage = ex.Message;
+                            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a4d51a9b-ea9b-46b2-af12-91c093c0d9b7")]
+                            delay new System.TimeSpan(0,0,0,MFM.Colleague.Helper.AdhocWorkflowClient.GetRetryDelaySecs());
+                        }
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fdad9cd3-e382-4976-bfba-f2ba3abf3aa7")]
+            if (Error == true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e997bcac-082f-4cae-a550-526ae9cd79b9")]
+                RequestXml = RrUpd;
+                ErrorMessage = "Failed to submit request to Adhoc workflow: " + ErrorMessage;
+                //make failed request parameter filename friendly
+                ArchiveFileName = "PublishRRMISRSTAT_" + AdhocWorkflow.Workflow.SRNumber;
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a48c7d38-8efd-4197-a935-ad80fb428c51")]
+                EmailBody = System.String.Format("Adhoc Workflow.\r\n\r\nAction being attempted: {1} \r\n\r\nError Message: {0}", ErrorMessage, ArchiveFileName);
+                
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("870b7a1f-6835-41cc-bd50-57930093d607")]
+                NotificationXml.LoadXml(MFM.Colleague.Helper.EmailHelper.BuildAdhocEmailMessage(EmailBody,  ArchiveFileName + ".xml", RequestXml, MFM.Colleague.Helper.EmailHelper.GetAdhocToEmail()));
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("02e86e0f-e6f1-47e1-a909-860a74d56db3")]
+                construct Notification
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e00c71c7-4939-4932-b3de-fee52725fefb")]
+                    Notification = NotificationXml;
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2c80025e-1728-4cd2-8dbb-3a14d11e9edf")]
+                send (EmailAlerter.Operation_1, Notification);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1b4bcf52-2901-45a2-8ac2-57809c7838aa")]
+                suspend "Failed to submit request to Adhoc workflow:" + ErrorMessage;
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("aa3e92f3-4a49-46e8-aa7a-3efb4e3ed868")]
+                exec IFM.MiRequest.PostAdhocWorkflow (RrUpd, AdhocWorkflow);
+            }
+        }
+    }
+}
+

@@ -1,0 +1,663 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6748a3b2-b031-4593-8392-70cbb271f3cd" LowerBound="1.1" HigherBound="131.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="266044fe-e334-4c3f-beef-7db44a741407" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="130.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PostServiceRequest" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="8b1f4275-25b6-4531-8c71-d68ccd564c46" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ErrorMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="47107379-c777-4a2c-b608-ce3a9fa632e5" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FailedRequestType" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="26e5a7c9-8f71-40e1-bc47-2d2b3f2562ad" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="e0f68288-39a7-4a7a-bcc1-0dcc26ccfe62" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResultTicketId" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1da9ffd6-6a02-460f-8363-8d532cb73828" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResultMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c7321989-13bd-4bec-9ffd-e3cf8c731911" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResultCode" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="6e9134b3-027a-403a-be74-5aa44d7295a8" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="result" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="b3ca40f1-61ea-4182-bf3c-d1449e0106a4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="9f67008f-0aed-4b7f-8ff7-d3684a6bb06f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Colleague.Helper.MiRequestOrderResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResponseObj" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="1486567a-25b4-40fe-9429-b82041a1c24f" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CustomerRef" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="3b35779d-c32d-4b38-a9e5-c92c2991d94d" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PROVIDER" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="167118ed-be0d-423f-8dd7-ad75cb0a0366" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="9.1" HigherBound="10.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TaskResponseDummy" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="79f753d1-2b07-4b51-a2e0-d5cde58e8ce0" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="10.1" HigherBound="11.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TaskResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="646c8a8a-0f61-46cf-b391-29d66cdcb12f" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="11.1" HigherBound="12.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TaskRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ce378ef2-7829-4770-b604-1498186fc862" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="12.1" HigherBound="13.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.CreateRRMISRRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OneTeamSrRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9ef4edfb-418e-42e5-b583-57d2e3028ffe" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="13.1" HigherBound="14.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.MiteRrCreateSrResp" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OneTeamResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="cf3d49c7-46f2-4a76-97a1-95dfa5fcc263" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="14.1" HigherBound="15.1">
+                <om:Property Name="Type" Value="MTFM.MiAMI.Services.GeneratedItems.MTFMSERVICEREQ.CreateMTFMSERVICEREQRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MiAMISrRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a550df8b-28a4-48ed-8cc7-e3ece25e289e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="15.1" HigherBound="16.1">
+                <om:Property Name="Type" Value="MTFM.MiAMI.Services.Schemas.MiamiSrInterfacesResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MiAMISrResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="0cfc2dc9-eb6d-4ac8-99f0-7d4a09016314" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="18567767-ac47-4d11-b568-d9b801df7f7d" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="42.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="RecieveSrRequest" />
+                    <om:Property Name="MessageName" Value="TaskRequest" />
+                    <om:Property Name="OperationName" Value="CreateOrderMaximo" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="LOG" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="295683a7-d5de-4186-a66f-a74c920540b6" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.Operation" />
+                        <om:Property Name="RHS" Value="&quot;CreateSr&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="fbe4f64f-e008-4db2-b7bb-35ea5e8562fa" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="IFM.MiRequest.Schema.Task_Provider" />
+                        <om:Property Name="RHS" Value="&quot;MiAMI&quot;" />
+                        <om:Property Name="Grouping" Value="OR" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="06b9cb40-8baf-4af7-aa47-ff7c4fbf673b" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="IFM.MiRequest.Schema.Task_Provider" />
+                        <om:Property Name="RHS" Value="&quot;1TEAM&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="30ba530b-9626-4dbd-9d30-a26baa007fd6" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.Operation" />
+                        <om:Property Name="RHS" Value="&quot;CreateSr&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="36fc4a25-3cbc-428d-a476-395ba1034312" ParentLink="ServiceBody_Statement" LowerBound="42.1" HigherBound="48.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Dummy_resp" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="00ce1fff-ab1d-439d-b089-9c994c07f054" ParentLink="ComplexStatement_Statement" LowerBound="45.1" HigherBound="47.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.Dummy_MaximoResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Get_Dummy" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="d3cbed13-2d96-463a-a4b0-6edd14dcc788" ParentLink="Transform_OutputMessagePartRef" LowerBound="46.28" HigherBound="46.45">
+                            <om:Property Name="MessageRef" Value="TaskResponseDummy" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="6dbe6a9f-6a44-476e-9cab-54587ce106df" ParentLink="Transform_InputMessagePartRef" LowerBound="46.90" HigherBound="46.101">
+                            <om:Property Name="MessageRef" Value="TaskRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="f62ff21c-5da5-4dab-a6ca-068db350a30b" ParentLink="Construct_MessageRef" LowerBound="43.23" HigherBound="43.40">
+                        <om:Property Name="Ref" Value="TaskResponseDummy" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="281a122b-b0df-42ab-8d9c-45a4fb1afea5" ParentLink="ServiceBody_Statement" LowerBound="48.1" HigherBound="51.1">
+                    <om:Property Name="Expression" Value="PROVIDER = TaskRequest.Provider;&#xD;&#xA;PROVIDER = PROVIDER.ToUpper();" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Set Provider" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="a6afc1fb-1c94-4808-9d63-b9757fefe3df" ParentLink="ServiceBody_Statement" LowerBound="51.1" HigherBound="117.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MaximoProvider" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="9172510b-ba0a-4eda-86dd-9b446df862f3" ParentLink="ReallyComplexStatement_Branch" LowerBound="52.13" HigherBound="82.1">
+                        <om:Property Name="Expression" Value="PROVIDER == &quot;1TEAM&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="AnalystComments" Value="This branch will map task to 1team service request schema and publish to MB for a 1team sr loader orc to subscrbe to" />
+                        <om:Property Name="Name" Value="1TEAM" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="f5d36e3b-8d19-4031-8401-ac653f27fa4b" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="56.1">
+                            <om:Property Name="Expression" Value="CustomerRef = TaskRequest.RequestRef;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set ref" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Task" OID="28472e30-3e81-44da-a726-8be523074586" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="68.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Web Service - 1TEAM" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Construct" OID="9a128b4d-a7a8-43c7-a004-8b071c3f0710" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="62.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="1TEAM SR" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Transform" OID="dcf11b00-ecef-47a8-8f8f-5182f1eaae0b" ParentLink="ComplexStatement_Statement" LowerBound="59.1" HigherBound="61.1">
+                                    <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.TaskRequest_To_RRCreateSr" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Transform_1TSr" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessagePartRef" OID="61ef05fe-133d-4d9d-84ac-ea9b1d61f2da" ParentLink="Transform_InputMessagePartRef" LowerBound="60.109" HigherBound="60.120">
+                                        <om:Property Name="MessageRef" Value="TaskRequest" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_3" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="MessagePartRef" OID="fc44584b-8bf1-4aac-ac43-7951aecfe75c" ParentLink="Transform_OutputMessagePartRef" LowerBound="60.32" HigherBound="60.59">
+                                        <om:Property Name="MessageRef" Value="OneTeamSrRequest" />
+                                        <om:Property Name="PartRef" Value="parameters" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_4" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="814a5c88-f245-4519-963a-c2ad24a2409b" ParentLink="Construct_MessageRef" LowerBound="57.27" HigherBound="57.43">
+                                    <om:Property Name="Ref" Value="OneTeamSrRequest" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="Call" OID="601035f6-10da-4468-8097-46a80562b10f" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="64.1">
+                                <om:Property Name="Identifier" Value="CallOrchestration_NewSR" />
+                                <om:Property Name="Invokee" Value="MTFM._1TEAM.Services.AddSr" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="CallOrchestration_NewSR" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Parameter" OID="b8f2d7d8-e35f-4113-8bea-04c44b2e3b0e" ParentLink="InvokeStatement_Parameter">
+                                    <om:Property Name="Direction" Value="In" />
+                                    <om:Property Name="Name" Value="OneTeamSrRequest" />
+                                    <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.CreateRRMISRRequest" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="Parameter" OID="d80c55b9-d8de-4241-b002-6feb5a14360e" ParentLink="InvokeStatement_Parameter">
+                                    <om:Property Name="Direction" Value="Out" />
+                                    <om:Property Name="Name" Value="OneTeamResponse" />
+                                    <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.MiteRrCreateSrResp" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="Parameter" OID="d670ef2b-3044-4d70-8da7-d1219d8628a5" ParentLink="InvokeStatement_Parameter">
+                                    <om:Property Name="Direction" Value="In" />
+                                    <om:Property Name="Name" Value="CustomerRef" />
+                                    <om:Property Name="Type" Value="System.String" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="VariableAssignment" OID="8ba4b969-1cd7-47a5-9a16-c482394ea5b3" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="68.1">
+                                <om:Property Name="Expression" Value="ResultCode = OneTeamResponse.result;&#xD;&#xA;ResultMessage = OneTeamResponse.messageText;&#xD;&#xA;ResultTicketId = OneTeamResponse.ticketId;" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="SetResponseVars" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Decision" OID="f0f7c5c5-7ad9-4011-9378-1938088f30b7" ParentLink="ComplexStatement_Statement" LowerBound="68.1" HigherBound="81.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Alert Needed" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="711a7a96-eff8-4888-8be7-09ad0ce6fe16" ParentLink="ReallyComplexStatement_Branch" LowerBound="69.17" HigherBound="81.1">
+                                <om:Property Name="Expression" Value="//All negative number result codes are errors from the web service loader&#xD;&#xA;//May be soap exception  or general exception&#xD;&#xA;System.Convert.ToInt32(ResultCode) &lt; 0" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Yes" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableAssignment" OID="9b3e0032-42f9-420f-aaf2-6a05ce2ec34a" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="78.1">
+                                    <om:Property Name="Expression" Value="RequestXml = OneTeamSrRequest.parameters;&#xD;&#xA;ErrorMessage = OneTeamResponse.messageText + &quot;(&quot; + OneTeamResponse.result + &quot;)&quot;;&#xD;&#xA;//make failed request parameter filename friendly&#xD;&#xA;FailedRequestType = &quot;RRMISRCreate_&quot; + TaskRequest.RequestRef + &quot;_&quot; + TaskRequest.Provider;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set Alert Vars" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="Exec" OID="89177a95-879e-4834-8305-36a26b8a6bb2" ParentLink="ComplexStatement_Statement" LowerBound="78.1" HigherBound="80.1">
+                                    <om:Property Name="Invokee" Value="IFM.MiRequest.ErrorHandler" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="StartOrchestration_1" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Parameter" OID="54ed0021-8352-4ea7-a9d6-0d76ad24f5b2" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="RequestXml" />
+                                        <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Parameter" OID="ec880966-aa61-4de2-a419-65926d0f7370" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="FailedRequestType" />
+                                        <om:Property Name="Type" Value="System.String" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Parameter" OID="6089fd84-50b3-46fb-b49a-a4f1d70fe8da" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="ErrorMessage" />
+                                        <om:Property Name="Type" Value="System.String" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="162902aa-4990-4ade-acd1-0d3f4eabc6e2" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="8ade6567-933d-40b6-8a55-8c4069099762" ParentLink="ReallyComplexStatement_Branch" LowerBound="82.18" HigherBound="110.1">
+                        <om:Property Name="Expression" Value="PROVIDER == &quot;MIAMI&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="AnalystComments" Value="This branch will map task to miami service request schema and publish to MB for a 1team sr loader orc to subscrbe to" />
+                        <om:Property Name="Name" Value="MIAMI" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Task" OID="5cb98c03-53c3-4c9c-a456-49b620034e01" ParentLink="ComplexStatement_Statement" LowerBound="84.1" HigherBound="90.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Web Service - MiAMI" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Construct" OID="07b6499d-354b-457e-b13b-fee6fe3be315" ParentLink="ComplexStatement_Statement" LowerBound="84.1" HigherBound="90.1">
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="ConstructMessage_1" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Transform" OID="10ee177d-af9d-48ef-9987-8c6e6ff5479a" ParentLink="ComplexStatement_Statement" LowerBound="87.1" HigherBound="89.1">
+                                    <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.TaskRequest_To_MiamiCreateSr" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Transform__miamiSR" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="MessagePartRef" OID="60ee0449-aa49-4aa8-a3dd-9f15c1838452" ParentLink="Transform_InputMessagePartRef" LowerBound="88.110" HigherBound="88.121">
+                                        <om:Property Name="MessageRef" Value="TaskRequest" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_5" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="MessagePartRef" OID="15608a97-9833-494d-8456-2f9b084b74bf" ParentLink="Transform_OutputMessagePartRef" LowerBound="88.32" HigherBound="88.57">
+                                        <om:Property Name="MessageRef" Value="MiAMISrRequest" />
+                                        <om:Property Name="PartRef" Value="parameters" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="MessagePartReference_6" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="MessageRef" OID="d3c55932-5199-42df-8b7f-2017e6d07aed" ParentLink="Construct_MessageRef" LowerBound="85.27" HigherBound="85.41">
+                                    <om:Property Name="Ref" Value="MiAMISrRequest" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Call" OID="3d7751f7-1b94-45f9-9bbe-f48cc2c1d8bb" ParentLink="ComplexStatement_Statement" LowerBound="90.1" HigherBound="92.1">
+                            <om:Property Name="Identifier" Value="CallOrchestration_1" />
+                            <om:Property Name="Invokee" Value="MTFM.MiAMI.Services.MiamiSrAdd" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="CallOrchestration_1" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Parameter" OID="e475449a-7043-4c62-91e1-d885ce9e065b" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="Out" />
+                                <om:Property Name="Name" Value="MiAMISrResponse" />
+                                <om:Property Name="Type" Value="MTFM.MiAMI.Services.Schemas.MiamiSrInterfacesResponse" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="62837d9c-8927-4b82-84e6-58404bcb0306" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="MiAMISrRequest" />
+                                <om:Property Name="Type" Value="MTFM.MiAMI.Services.GeneratedItems.MTFMSERVICEREQ.CreateMTFMSERVICEREQRequest" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="VariableAssignment" OID="e3c06f69-ab76-4224-b1cc-230702dd8f85" ParentLink="ComplexStatement_Statement" LowerBound="92.1" HigherBound="96.1">
+                            <om:Property Name="Expression" Value="ResultCode = MiAMISrResponse.result;&#xD;&#xA;ResultMessage = MiAMISrResponse.messageText;&#xD;&#xA;ResultTicketId = MiAMISrResponse.ticketId;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SetResponseVars" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="Decision" OID="7a0b218e-5d08-49c8-8430-1d6ef382cd2e" ParentLink="ComplexStatement_Statement" LowerBound="96.1" HigherBound="109.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Alert Needed" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="b749d0c0-41c3-4d4e-b588-ede74c6d8054" ParentLink="ReallyComplexStatement_Branch" LowerBound="97.17" HigherBound="109.1">
+                                <om:Property Name="Expression" Value="//All negative number result codes are errors from the web service loader&#xD;&#xA;//May be soap exception  or general exception&#xD;&#xA;System.Convert.ToInt32(ResultCode) &lt; 0" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Yes" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="VariableAssignment" OID="ae1ea973-2118-4825-bc17-eb94fdd6944a" ParentLink="ComplexStatement_Statement" LowerBound="101.1" HigherBound="106.1">
+                                    <om:Property Name="Expression" Value="RequestXml = MiAMISrRequest.parameters;&#xD;&#xA;ErrorMessage = MiAMISrResponse.messageText + &quot;(&quot; + MiAMISrResponse.result + &quot;)&quot;;&#xD;&#xA;//make failed request parameter filename friendly&#xD;&#xA;FailedRequestType = MiAMISrResponse.iface + TaskRequest.RequestRef + &quot;_&quot; + TaskRequest.Provider;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set Alert Vars" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="Exec" OID="ec9adbf9-f4d6-4db4-ba1c-f704f997a52e" ParentLink="ComplexStatement_Statement" LowerBound="106.1" HigherBound="108.1">
+                                    <om:Property Name="Invokee" Value="IFM.MiRequest.ErrorHandler" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="StartOrchestration_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="Parameter" OID="70ac4bfd-1d4e-491d-a4ca-bafd2dffa4b0" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="RequestXml" />
+                                        <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Parameter" OID="2ab5e7f7-d1f7-4c22-be2b-8395dfa4ce3c" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="FailedRequestType" />
+                                        <om:Property Name="Type" Value="System.String" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Parameter" OID="cad3b2bf-fe80-4894-9a18-c54d7ba2a7cb" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="ErrorMessage" />
+                                        <om:Property Name="Type" Value="System.String" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="3280f6c9-d01c-40af-9a87-03d344c715e8" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="9b9fa3fa-3126-492a-8aac-753b95a7d67d" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="b9cb9614-cd10-4747-8089-f610e131d2f6" ParentLink="ComplexStatement_Statement" LowerBound="112.1" HigherBound="116.1">
+                            <om:Property Name="Expression" Value="ResultCode = &quot;-4&quot;;&#xD;&#xA;ResultMessage = &quot;The provider is not recognised: &quot; + TaskRequest.Provider;&#xD;&#xA;ResultTicketId = @&quot;N\A&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="SetResponseVars" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="f30a432a-ee44-4033-87c6-4ac9bf37d803" ParentLink="ServiceBody_Statement" LowerBound="117.1" HigherBound="126.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RealResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="3e772f17-1450-4edb-8162-1174bb1f029d" ParentLink="ComplexStatement_Statement" LowerBound="120.1" HigherBound="125.1">
+                        <om:Property Name="Expression" Value="TaskResponse = TaskResponseDummy;&#xD;&#xA;xpath(TaskResponse,&quot;/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ResultCode' and namespace-uri()='']&quot;) = ResultCode;&#xD;&#xA;xpath(TaskResponse,&quot;/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='Message' and namespace-uri()='']&quot;) = ResultMessage;&#xD;&#xA;xpath(TaskResponse,&quot;/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ProviderRef' and namespace-uri()='']&quot;) = ResultTicketId;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="LoadResult" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="aa98f05f-2d41-452f-995d-117a027fd8bd" ParentLink="Construct_MessageRef" LowerBound="118.23" HigherBound="118.35">
+                        <om:Property Name="Ref" Value="TaskResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="967d4be7-87f9-4664-89c1-e54c5d502a5a" ParentLink="ServiceBody_Statement" LowerBound="126.1" HigherBound="128.1">
+                    <om:Property Name="PortName" Value="RecieveSrRequest" />
+                    <om:Property Name="MessageName" Value="TaskResponse" />
+                    <om:Property Name="OperationName" Value="CreateOrderMaximo" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e223aa72-a62d-403f-8d8a-f50cd0aefa5c" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="7.1" HigherBound="9.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="45" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.CreateRequestMaximoType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RecieveSrRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="c3a7faa7-eff3-417f-8131-273e886b1275" ParentLink="PortDeclaration_CLRAttribute" LowerBound="7.1" HigherBound="8.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PostServiceRequest
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements CreateRequestMaximoType RecieveSrRequest;
+        message Schema.TaskLoader.TaskLoadResponse TaskResponseDummy;
+        message Schema.TaskLoader.TaskLoadResponse TaskResponse;
+        message Schema.TaskLoader.TaskLoadRequest TaskRequest;
+        message MTFM._1TEAM.Services.GeneratedItems.RRMISR.CreateRRMISRRequest OneTeamSrRequest;
+        message MTFM._1TEAM.Services.Schemas.MiteRrCreateSrResp OneTeamResponse;
+        message MTFM.MiAMI.Services.GeneratedItems.MTFMSERVICEREQ.CreateMTFMSERVICEREQRequest MiAMISrRequest;
+        message MTFM.MiAMI.Services.Schemas.MiamiSrInterfacesResponse MiAMISrResponse;
+        System.String ErrorMessage;
+        System.String FailedRequestType;
+        System.Xml.XmlDocument RequestXml;
+        System.String ResultTicketId;
+        System.String ResultMessage;
+        System.String ResultCode;
+        System.Boolean result;
+        System.Xml.XmlDocument RequestDoc;
+        MFM.Colleague.Helper.MiRequestOrderResponse ResponseObj;
+        System.String CustomerRef;
+        System.String PROVIDER;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("18567767-ac47-4d11-b568-d9b801df7f7d")]
+            activate ((BTS.Operation == "CreateSr") && (IFM.MiRequest.Schema.Task_Provider == "MiAMI") || (IFM.MiRequest.Schema.Task_Provider == "1TEAM") && (BTS.Operation == "CreateSr"))receive (RecieveSrRequest.CreateOrderMaximo, TaskRequest);
+            ErrorMessage = "";
+            FailedRequestType = "";
+            RequestXml = new System.Xml.XmlDocument();
+            ResultTicketId = "";
+            ResultMessage = "";
+            ResultCode = "";
+            result = true;
+            RequestDoc = new System.Xml.XmlDocument();
+            ResponseObj = new MFM.Colleague.Helper.MiRequestOrderResponse();
+            CustomerRef = "";
+            PROVIDER = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("36fc4a25-3cbc-428d-a476-395ba1034312")]
+            construct TaskResponseDummy
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("00ce1fff-ab1d-439d-b089-9c994c07f054")]
+                transform (TaskResponseDummy) = IFM.MiRequest.Maps.Dummy_MaximoResponse (TaskRequest);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("281a122b-b0df-42ab-8d9c-45a4fb1afea5")]
+            PROVIDER = TaskRequest.Provider;
+            PROVIDER = PROVIDER.ToUpper();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a6afc1fb-1c94-4808-9d63-b9757fefe3df")]
+            if (PROVIDER == "1TEAM")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("f5d36e3b-8d19-4031-8401-ac653f27fa4b")]
+                CustomerRef = TaskRequest.RequestRef;
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a128b4d-a7a8-43c7-a004-8b071c3f0710")]
+                construct OneTeamSrRequest
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("dcf11b00-ecef-47a8-8f8f-5182f1eaae0b")]
+                    transform (OneTeamSrRequest.parameters) = IFM.MiRequest.Maps.TaskRequest_To_RRCreateSr (TaskRequest);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("601035f6-10da-4468-8097-46a80562b10f")]
+                call MTFM._1TEAM.Services.AddSr (OneTeamSrRequest, out OneTeamResponse, CustomerRef);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("8ba4b969-1cd7-47a5-9a16-c482394ea5b3")]
+                ResultCode = OneTeamResponse.result;
+                ResultMessage = OneTeamResponse.messageText;
+                ResultTicketId = OneTeamResponse.ticketId;
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("f0f7c5c5-7ad9-4011-9378-1938088f30b7")]
+                if (//All negative number result codes are errors from the web service loader
+                    //May be soap exception  or general exception
+                    System.Convert.ToInt32(ResultCode) < 0)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9b3e0032-42f9-420f-aaf2-6a05ce2ec34a")]
+                    RequestXml = OneTeamSrRequest.parameters;
+                    ErrorMessage = OneTeamResponse.messageText + "(" + OneTeamResponse.result + ")";
+                    //make failed request parameter filename friendly
+                    FailedRequestType = "RRMISRCreate_" + TaskRequest.RequestRef + "_" + TaskRequest.Provider;
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("89177a95-879e-4834-8305-36a26b8a6bb2")]
+                    exec IFM.MiRequest.ErrorHandler (RequestXml, FailedRequestType, ErrorMessage);
+                }
+            }
+            else if (PROVIDER == "MIAMI")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("07b6499d-354b-457e-b13b-fee6fe3be315")]
+                construct MiAMISrRequest
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("10ee177d-af9d-48ef-9987-8c6e6ff5479a")]
+                    transform (MiAMISrRequest.parameters) = IFM.MiRequest.Maps.TaskRequest_To_MiamiCreateSr (TaskRequest);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("3d7751f7-1b94-45f9-9bbe-f48cc2c1d8bb")]
+                call MTFM.MiAMI.Services.MiamiSrAdd (out MiAMISrResponse, MiAMISrRequest);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e3c06f69-ab76-4224-b1cc-230702dd8f85")]
+                ResultCode = MiAMISrResponse.result;
+                ResultMessage = MiAMISrResponse.messageText;
+                ResultTicketId = MiAMISrResponse.ticketId;
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7a0b218e-5d08-49c8-8430-1d6ef382cd2e")]
+                if (//All negative number result codes are errors from the web service loader
+                    //May be soap exception  or general exception
+                    System.Convert.ToInt32(ResultCode) < 0)
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("ae1ea973-2118-4825-bc17-eb94fdd6944a")]
+                    RequestXml = MiAMISrRequest.parameters;
+                    ErrorMessage = MiAMISrResponse.messageText + "(" + MiAMISrResponse.result + ")";
+                    //make failed request parameter filename friendly
+                    FailedRequestType = MiAMISrResponse.iface + TaskRequest.RequestRef + "_" + TaskRequest.Provider;
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("ec9adbf9-f4d6-4db4-ba1c-f704f997a52e")]
+                    exec IFM.MiRequest.ErrorHandler (RequestXml, FailedRequestType, ErrorMessage);
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b9cb9614-cd10-4747-8089-f610e131d2f6")]
+                ResultCode = "-4";
+                ResultMessage = "The provider is not recognised: " + TaskRequest.Provider;
+                ResultTicketId = @"N\A";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f30a432a-ee44-4033-87c6-4ac9bf37d803")]
+            construct TaskResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("3e772f17-1450-4edb-8162-1174bb1f029d")]
+                TaskResponse = TaskResponseDummy;
+                xpath(TaskResponse,"/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ResultCode' and namespace-uri()='']") = ResultCode;
+                xpath(TaskResponse,"/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='Message' and namespace-uri()='']") = ResultMessage;
+                xpath(TaskResponse,"/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ProviderRef' and namespace-uri()='']") = ResultTicketId;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("967d4be7-87f9-4664-89c1-e54c5d502a5a")]
+            send (RecieveSrRequest.CreateOrderMaximo, TaskResponse);
+        }
+    }
+}
+

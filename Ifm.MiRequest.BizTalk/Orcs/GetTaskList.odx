@@ -1,0 +1,265 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="d9671223-3d10-4abe-8d61-79bdcae968a2" LowerBound="1.1" HigherBound="49.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="4b9f9d43-7ca8-4c80-a708-ff9e83786313" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="GetTasksListQueryType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2f1c58b4-e9ca-41eb-8c24-a3739f3d4c5a" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetTasksList" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="b3e18b74-2865-4573-9777-f77ff0847418" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.49">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.TaskListQuery.TaskListRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="b0df84cd-fa78-4cee-918b-1e7b9489405a" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.51" HigherBound="8.88">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.TaskListQuery.TaskListResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="51fc971b-2373-4ee5-9c5e-21f84bfeaa62" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="48.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="GetTaskList" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="MessageDeclaration" OID="0bf4a7f3-4a5c-4da2-9fd3-b63cbd06b49e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="MTFM.MiAMI.Services.GeneratedItems.QueryMTFMCONCEPTWOINResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MxoWoQueryAnswer" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="126d39f4-de92-4c89-b330-b25d629a400e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="MTFM.MiAMI.Services.GeneratedItems.QueryMTFMCONCEPTWOINRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MxoWoQuery" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="121cc0e4-387c-45fa-b411-15d1f79b4425" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskListQuery.TaskListRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestList" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="0c21dcb9-ebb3-4713-8a02-7213f3faf99d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskListQuery.TaskListResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResponseList" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="3e4a4c53-3cd8-433d-9b1d-fdcfee903b29" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="30798673-c674-42ac-bf8e-03423ed7322f" ParentLink="ServiceBody_Statement" LowerBound="24.1" HigherBound="26.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="GetTasksListQuery" />
+                    <om:Property Name="MessageName" Value="RequestList" />
+                    <om:Property Name="OperationName" Value="GetTasksList" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Query" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="2b76e14d-7ede-4472-be19-562bc1ecc941" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.Operation" />
+                        <om:Property Name="RHS" Value="&quot;GetTasksList&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="aef09075-4262-4100-9b4b-f7fe21f65c05" ParentLink="ServiceBody_Statement" LowerBound="26.1" HigherBound="32.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct_Mxo_List_Query" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="acb4e710-0791-418b-8dfb-179878c2c651" ParentLink="ComplexStatement_Statement" LowerBound="29.1" HigherBound="31.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.TaskListQuery_To_MiamiQueryWoByUser" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_ListQ" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="e8edecb8-acd1-49df-aeb3-615087aa39d6" ParentLink="Transform_InputMessagePartRef" LowerBound="30.109" HigherBound="30.120">
+                            <om:Property Name="MessageRef" Value="RequestList" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="f974016d-8f54-4fe5-8bc3-2ad95fa2c8b4" ParentLink="Transform_OutputMessagePartRef" LowerBound="30.28" HigherBound="30.49">
+                            <om:Property Name="MessageRef" Value="MxoWoQuery" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="0ef12a88-d7c6-4e67-b196-456dffefb9de" ParentLink="Construct_MessageRef" LowerBound="27.23" HigherBound="27.33">
+                        <om:Property Name="Ref" Value="MxoWoQuery" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="e3451ded-8c14-44dc-8eb8-88cb8a60b9a9" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="34.1">
+                    <om:Property Name="PortName" Value="QueryMaximoWorkordersByOwner" />
+                    <om:Property Name="MessageName" Value="MxoWoQuery" />
+                    <om:Property Name="OperationName" Value="QueryMTFMCONCEPTWOIN" />
+                    <om:Property Name="OperationMessageName" Value="request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_MxoList_Query" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="1d3066df-bd0f-4338-9005-486654938c67" ParentLink="ServiceBody_Statement" LowerBound="34.1" HigherBound="36.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="QueryMaximoWorkordersByOwner" />
+                    <om:Property Name="MessageName" Value="MxoWoQueryAnswer" />
+                    <om:Property Name="OperationName" Value="QueryMTFMCONCEPTWOIN" />
+                    <om:Property Name="OperationMessageName" Value="response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="MxoList_Answer" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="76beb972-750f-40f6-a4e5-53d0fffeaeaa" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="44.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="cfc052a1-d3da-40ac-95bf-e9a02ecbc0a0" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="41.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.WoListResponse_To_TaskListQueryResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_Response" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="52a0bb02-3fbb-4a70-b7dd-c67a556747a2" ParentLink="Transform_InputMessagePartRef" LowerBound="40.104" HigherBound="40.131">
+                            <om:Property Name="MessageRef" Value="MxoWoQueryAnswer" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="cfa1ecbf-aed9-4ce0-b135-777037d5611c" ParentLink="Transform_OutputMessagePartRef" LowerBound="40.28" HigherBound="40.40">
+                            <om:Property Name="MessageRef" Value="ResponseList" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="26a80830-608c-488b-863a-b7da492d1b94" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="43.1">
+                        <om:Property Name="Expression" Value="xpath(ResponseList,&quot;/*[local-name()='TaskListResponse' and namespace-uri()='https://IFM.MiRequest.TaskListQuery']/*[local-name()='Result' and namespace-uri()='']/*[local-name()='User' and namespace-uri()='']&quot;) = RequestList.user;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="fb4de21d-ec20-4530-bf45-6e3539120a5c" ParentLink="Construct_MessageRef" LowerBound="37.23" HigherBound="37.35">
+                        <om:Property Name="Ref" Value="ResponseList" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="5c3d9568-c1ee-43f2-b306-711b798e52ee" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="46.1">
+                    <om:Property Name="PortName" Value="GetTasksListQuery" />
+                    <om:Property Name="MessageName" Value="ResponseList" />
+                    <om:Property Name="OperationName" Value="GetTasksList" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ebeded4e-5272-4ef8-95bd-20085fff3090" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.GetTasksListQueryType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetTasksListQuery" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="e8e0d66a-2a7b-491d-90e3-2fdb387a3126" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="793b04d3-da79-4dc7-b08e-9e9148339d9b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MTFM.MiAMI.Services.GeneratedItems.MTFMCONCEPTWOINPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="QueryMaximoWorkordersByOwner" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="49893948-9a0a-45e4-adc7-5486b1953f11" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    public porttype GetTasksListQueryType
+    {
+        requestresponse GetTasksList
+        {
+            Schema.TaskListQuery.TaskListRequest, Schema.TaskListQuery.TaskListResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service GetTaskList
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements GetTasksListQueryType GetTasksListQuery;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses MTFM.MiAMI.Services.GeneratedItems.MTFMCONCEPTWOINPortType QueryMaximoWorkordersByOwner;
+        message MTFM.MiAMI.Services.GeneratedItems.QueryMTFMCONCEPTWOINResponse MxoWoQueryAnswer;
+        message MTFM.MiAMI.Services.GeneratedItems.QueryMTFMCONCEPTWOINRequest MxoWoQuery;
+        message Schema.TaskListQuery.TaskListRequest RequestList;
+        message Schema.TaskListQuery.TaskListResponse ResponseList;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("30798673-c674-42ac-bf8e-03423ed7322f")]
+            activate ((BTS.Operation == "GetTasksList"))receive (GetTasksListQuery.GetTasksList, RequestList);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("aef09075-4262-4100-9b4b-f7fe21f65c05")]
+            construct MxoWoQuery
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("acb4e710-0791-418b-8dfb-179878c2c651")]
+                transform (MxoWoQuery.parameters) = IFM.MiRequest.Maps.TaskListQuery_To_MiamiQueryWoByUser (RequestList);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e3451ded-8c14-44dc-8eb8-88cb8a60b9a9")]
+            send (QueryMaximoWorkordersByOwner.QueryMTFMCONCEPTWOIN, MxoWoQuery);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1d3066df-bd0f-4338-9005-486654938c67")]
+            receive (QueryMaximoWorkordersByOwner.QueryMTFMCONCEPTWOIN, MxoWoQueryAnswer);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("76beb972-750f-40f6-a4e5-53d0fffeaeaa")]
+            construct ResponseList
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("cfc052a1-d3da-40ac-95bf-e9a02ecbc0a0")]
+                transform (ResponseList) = IFM.MiRequest.Maps.WoListResponse_To_TaskListQueryResponse (MxoWoQueryAnswer.parameters);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("26a80830-608c-488b-863a-b7da492d1b94")]
+                xpath(ResponseList,"/*[local-name()='TaskListResponse' and namespace-uri()='https://IFM.MiRequest.TaskListQuery']/*[local-name()='Result' and namespace-uri()='']/*[local-name()='User' and namespace-uri()='']") = RequestList.user;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5c3d9568-c1ee-43f2-b306-711b798e52ee")]
+            send (GetTasksListQuery.GetTasksList, ResponseList);
+        }
+    }
+}
+

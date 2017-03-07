@@ -1,0 +1,181 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="f6d71f0f-32bb-4173-ad28-b61c5ec6f1b6" LowerBound="1.1" HigherBound="40.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="MFM.Colleague.Portal" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="3dc99415-fbcb-46ac-8cbc-93a80fc6094f" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="LocationsQueryGetType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="15b96f6d-4509-4cd1-81af-aaf2d05b4dbb" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetLocationsList" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="bcf58eb6-87b0-49d7-80ce-d1e9f6aacfa2" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.63">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.LocationQuery.LocationRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="f6c1d525-fa34-4a6a-a8e6-030a71b6ae85" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.65" HigherBound="8.116">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.LocationQuery.LocationResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="48ff4e2d-c046-438e-b093-ceca44218410" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="39.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="GetLocationsList" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="c34f9dfa-ca47-4168-8a38-cfd1aab2d1f9" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XmlStr" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="d95bce27-8130-41f9-b769-70a632991c00" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="XmlResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="dc99ad90-bfde-4a86-a178-e21e2782a11c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.LocationQuery.LocationResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e098f0b3-3c9d-411f-bd84-11e3d2fd8b77" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.LocationQuery.LocationRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Request" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="79260be4-26f9-4a08-aafb-61361308f312" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="13924996-f1c8-4594-af57-051b5ef7dffb" ParentLink="ServiceBody_Statement" LowerBound="22.1" HigherBound="26.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="LocationsQueryGet" />
+                    <om:Property Name="MessageName" Value="Request" />
+                    <om:Property Name="OperationName" Value="GetLocationsList" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="b3e9c6bd-c1f6-4b00-b33c-e2332a8d23ee" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.Operation" />
+                        <om:Property Name="RHS" Value="&quot;GetLocationsList&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="31c137f6-2b18-4262-a18f-c32a8fb5c049" ParentLink="ServiceBody_Statement" LowerBound="26.1" HigherBound="29.1">
+                    <om:Property Name="Expression" Value="XmlStr = MFM.Colleague.Helper.DataAccess.GetLocationList(Request.Contract,Request.Provider,Request.Match);&#xD;&#xA;XmlResponse.LoadXml(XmlStr);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="QueryLocations" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="44cd72ca-b4c3-4ed9-a877-539ae3f3e60c" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="35.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="ba0cc424-fbc8-431f-b8be-108b5590db5a" ParentLink="Construct_MessageRef" LowerBound="30.23" HigherBound="30.31">
+                        <om:Property Name="Ref" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="acfe8f13-a193-4bb2-a7c2-d550ab5ad0dd" ParentLink="ComplexStatement_Statement" LowerBound="32.1" HigherBound="34.1">
+                        <om:Property Name="Expression" Value="Response = XmlResponse;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="AssignResponse" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="a0773332-5471-40e7-92fd-558650531472" ParentLink="ServiceBody_Statement" LowerBound="35.1" HigherBound="37.1">
+                    <om:Property Name="PortName" Value="LocationsQueryGet" />
+                    <om:Property Name="MessageName" Value="Response" />
+                    <om:Property Name="OperationName" Value="GetLocationsList" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Respond" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="aab2858d-ce82-4104-9601-d235c7806959" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="8" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="MFM.Colleague.Portal.LocationsQueryGetType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="LocationsQueryGet" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="d8433b66-ad68-4bb0-a0f1-7c9ea0449985" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module MFM.Colleague.Portal
+{
+    public porttype LocationsQueryGetType
+    {
+        requestresponse GetLocationsList
+        {
+            IFM.MiRequest.Schema.LocationQuery.LocationRequest, IFM.MiRequest.Schema.LocationQuery.LocationResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service GetLocationsList
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements LocationsQueryGetType LocationsQueryGet;
+        message IFM.MiRequest.Schema.LocationQuery.LocationResponse Response;
+        message IFM.MiRequest.Schema.LocationQuery.LocationRequest Request;
+        System.String XmlStr;
+        System.Xml.XmlDocument XmlResponse;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("13924996-f1c8-4594-af57-051b5ef7dffb")]
+            activate ((BTS.Operation == "GetLocationsList"))receive (LocationsQueryGet.GetLocationsList, Request);
+            XmlStr = "";
+            XmlResponse = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("31c137f6-2b18-4262-a18f-c32a8fb5c049")]
+            XmlStr = MFM.Colleague.Helper.DataAccess.GetLocationList(Request.Contract,Request.Provider,Request.Match);
+            XmlResponse.LoadXml(XmlStr);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("44cd72ca-b4c3-4ed9-a877-539ae3f3e60c")]
+            construct Response
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("acfe8f13-a193-4bb2-a7c2-d550ab5ad0dd")]
+                Response = XmlResponse;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a0773332-5471-40e7-92fd-558650531472")]
+            send (LocationsQueryGet.GetLocationsList, Response);
+        }
+    }
+}
+

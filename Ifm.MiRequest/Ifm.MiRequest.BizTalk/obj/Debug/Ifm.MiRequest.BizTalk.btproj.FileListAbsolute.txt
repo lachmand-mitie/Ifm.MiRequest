@@ -1,0 +1,6 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.BizTalk\bin\Debug\Ifm.MiRequest.BizTalk.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.BizTalk\bin\Debug\Ifm.MiRequest.BizTalk.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.BizTalk\bin\Debug\Ifm.MiRequest.Helper.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.BizTalk\bin\Debug\IFM.MiRequest.RestComponent.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.BizTalk\obj\Debug\Ifm.MiRequest.BizTalk.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.BizTalk\obj\Debug\Ifm.MiRequest.BizTalk.pdb

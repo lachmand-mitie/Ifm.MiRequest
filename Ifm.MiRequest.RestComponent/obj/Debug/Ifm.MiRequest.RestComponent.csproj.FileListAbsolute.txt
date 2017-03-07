@@ -1,0 +1,5 @@
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.RestComponent\bin\Debug\IFM.MiRequest.RestComponent.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.RestComponent\bin\Debug\IFM.MiRequest.RestComponent.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.RestComponent\obj\Debug\IFM.MiRequest.RestComponent.dll
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.RestComponent\obj\Debug\IFM.MiRequest.RestComponent.pdb
+F:\Latch\MFM Integration Apps Group\BizTalk2013\Ifm.MiRequest\Ifm.MiRequest.RestComponent\obj\Debug\Ifm.MiRequest.RestComponent.csprojResolveAssemblyReference.cache

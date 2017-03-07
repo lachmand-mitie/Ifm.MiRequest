@@ -1,0 +1,270 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="a88d92aa-39ce-4544-9ce5-dba526f5524a" LowerBound="1.1" HigherBound="59.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="a727f75e-a4fc-4871-b29c-82bc7534ed81" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="EmailAlerterType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="338bb1c1-19da-4946-9634-ba026c897324" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="d5ce2d2d-dffc-4be9-b583-be5ec5accfc3" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.52">
+                    <om:Property Name="Ref" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="5b684563-0f6d-434b-bd72-b1e0e7e05018" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ArchivePortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="d1a5ae5f-b384-4b98-b3f7-da766c2a3963" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="4563ad9b-03be-469d-8a9d-7a750cc7d75f" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="6fe9742a-4d9f-41b2-bf4a-a1630c8ed96f" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="58.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ErrorHandler" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="65a7f31a-987e-4145-a88d-76ea3195ec0b" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="NotificationXml" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="b66f7312-64a2-4276-9630-956bff2fee84" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailBody" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="e75fb555-7dc0-415a-8deb-4801d286f4bd" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchiveFileName" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c1c8c1ab-ce29-4b7f-9259-bbf9700bfa8b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="MSS.Notification.Service.MSSNotifyEmail" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Notification" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="f124a1ab-e4f4-47bb-b011-db2270fcecb5" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchiveIt" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="c5bb8bca-3e77-4ce9-b5e2-5e6d2d9fc8ad" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="VariableDeclaration" OID="62792d35-98fd-4cce-9904-f66c93faf31f" ParentLink="ServiceBody_Declaration" LowerBound="30.15" HigherBound="30.51">
+                    <om:Property Name="UseDefaultConstructor" Value="True" />
+                    <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="FailedRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="29f5ac6e-391e-4fba-9d3c-64fca8638fcf" ParentLink="ServiceBody_Declaration" LowerBound="30.53" HigherBound="30.73">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Action" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableDeclaration" OID="039f4138-6366-4225-a74c-b372d0e69ac8" ParentLink="ServiceBody_Declaration" LowerBound="30.75" HigherBound="30.101">
+                    <om:Property Name="UseDefaultConstructor" Value="False" />
+                    <om:Property Name="Type" Value="System.String" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ErrorMessage" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="dd0f6028-04ea-4e38-9968-a0dd616a0e01" ParentLink="ServiceBody_Statement" LowerBound="35.1" HigherBound="39.1">
+                    <om:Property Name="Expression" Value="ArchiveFileName = MFM.Colleague.Helper.PortalClient.FilenameFriendly(Action) + &quot;.xml&quot;;&#xD;&#xA;EmailBody = System.String.Format(&quot;MiColleague Portal Error.\r\n\r\nAction being attempted: {1} \r\n\r\nError Message: {0}&quot;, ErrorMessage, Action);&#xD;&#xA;NotificationXml.LoadXml(MFM.Colleague.Helper.EmailHelper.BuildEmailMessage(EmailBody,  ArchiveFileName, FailedRequest, MFM.Colleague.Helper.EmailHelper.GetToEmail()));" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Init_vars" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="Construct" OID="9937c216-4881-440d-a50a-0d30b8f24779" ParentLink="ServiceBody_Statement" LowerBound="39.1" HigherBound="45.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Alert" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="3f697c35-686f-4a78-9d2e-4712a999aac2" ParentLink="Construct_MessageRef" LowerBound="40.23" HigherBound="40.35">
+                        <om:Property Name="Ref" Value="Notification" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="864a6c2e-6ea2-4052-973d-da20b4f3683a" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="44.1">
+                        <om:Property Name="Expression" Value="Notification = NotificationXml;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="AssignAlert" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="221659a6-3cb6-4050-9838-8283ba2200a7" ParentLink="ServiceBody_Statement" LowerBound="45.1" HigherBound="52.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructArchive" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="dd6e88a6-a059-4861-b48f-417243dbba48" ParentLink="ComplexStatement_Statement" LowerBound="48.1" HigherBound="51.1">
+                        <om:Property Name="Expression" Value="ArchiveIt = FailedRequest;&#xD;&#xA;ArchiveIt(FILE.ReceivedFileName) = ArchiveFileName;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="AssignArchive" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="9e972edb-4e0c-495f-bf0c-90704d77e7d4" ParentLink="Construct_MessageRef" LowerBound="46.23" HigherBound="46.32">
+                        <om:Property Name="Ref" Value="ArchiveIt" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="a21d50a1-b289-4c43-b17f-3fd951eb419b" ParentLink="ServiceBody_Statement" LowerBound="52.1" HigherBound="54.1">
+                    <om:Property Name="PortName" Value="EmailAlerter" />
+                    <om:Property Name="MessageName" Value="Notification" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Submit_Alert_Mb" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="76f84da0-7b33-4722-a104-481eae19e8da" ParentLink="ServiceBody_Statement" LowerBound="54.1" HigherBound="56.1">
+                    <om:Property Name="PortName" Value="ArchivePort" />
+                    <om:Property Name="MessageName" Value="ArchiveIt" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Err_Archive" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3b5a1479-ff54-47ec-a191-8fade4b098cc" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="11" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.EmailAlerterType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EmailAlerter" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="22d4a20c-b71f-4e0b-a51d-49c80c002ac5" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3c5d3242-3285-4ea8-b014-54d2575503e2" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="25" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.ArchivePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ArchivePort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="d9abe5cd-df39-4a95-9f2a-46bd460c9eac" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    internal porttype EmailAlerterType
+    {
+        oneway Operation_1
+        {
+            MSS.Notification.Service.MSSNotifyEmail
+        };
+    };
+    internal porttype ArchivePortType
+    {
+        oneway Operation_1
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ErrorHandler
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses EmailAlerterType EmailAlerter;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ArchivePortType ArchivePort;
+        message MSS.Notification.Service.MSSNotifyEmail Notification;
+        message System.Xml.XmlDocument ArchiveIt;
+        System.Xml.XmlDocument NotificationXml;
+        System.String EmailBody;
+        System.String ArchiveFileName;
+        body (System.Xml.XmlDocument FailedRequest, System.String Action, System.String ErrorMessage)
+        {
+            NotificationXml = new System.Xml.XmlDocument();
+            EmailBody = "";
+            ArchiveFileName = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("dd0f6028-04ea-4e38-9968-a0dd616a0e01")]
+            ArchiveFileName = MFM.Colleague.Helper.PortalClient.FilenameFriendly(Action) + ".xml";
+            EmailBody = System.String.Format("MiColleague Portal Error.\r\n\r\nAction being attempted: {1} \r\n\r\nError Message: {0}", ErrorMessage, Action);
+            NotificationXml.LoadXml(MFM.Colleague.Helper.EmailHelper.BuildEmailMessage(EmailBody,  ArchiveFileName, FailedRequest, MFM.Colleague.Helper.EmailHelper.GetToEmail()));
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9937c216-4881-440d-a50a-0d30b8f24779")]
+            construct Notification
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("864a6c2e-6ea2-4052-973d-da20b4f3683a")]
+                Notification = NotificationXml;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("221659a6-3cb6-4050-9838-8283ba2200a7")]
+            construct ArchiveIt
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("dd6e88a6-a059-4861-b48f-417243dbba48")]
+                ArchiveIt = FailedRequest;
+                ArchiveIt(FILE.ReceivedFileName) = ArchiveFileName;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a21d50a1-b289-4c43-b17f-3fd951eb419b")]
+            send (EmailAlerter.Operation_1, Notification);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("76f84da0-7b33-4722-a104-481eae19e8da")]
+            send (ArchivePort.Operation_1, ArchiveIt);
+        }
+    }
+}
+

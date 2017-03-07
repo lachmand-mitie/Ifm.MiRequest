@@ -1,0 +1,169 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="324ae8b2-2882-4e13-ae2f-cb720807dec1" LowerBound="1.1" HigherBound="35.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="eaa8ab07-9c84-4033-9f87-15be956b64f3" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveRrWorkLogType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2d06eb34-2e5b-41b0-b8b8-1aa3fdb72e62" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="5dc5fccb-c5cc-4721-ae6e-508634e9c53b" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.79">
+                    <om:Property Name="Ref" Value="MTFM._1TEAM.Services.Schemas.RRMIWORKLOGService.PublishRRMIWORKLOG" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="2a5963f7-928d-4a06-b552-000d1386da03" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="34.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="RrLogs" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="0d0e2746-b5d6-4dc6-ae76-84c5f7adc7cd" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.miworldcolleaguerequestupd" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PortalLogUpdate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="55d76445-c438-495e-b980-0b5b7ea5c32a" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.RRMIWORKLOGService.PublishRRMIWORKLOG" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RrLog" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="faf8f0f7-3aaa-41f4-80b7-a8af10b33055" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="746e61fa-90c2-4f57-8bf1-f54bfeff5ad2" ParentLink="ServiceBody_Statement" LowerBound="22.1" HigherBound="24.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveRrWorkLog" />
+                    <om:Property Name="MessageName" Value="RrLog" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Log" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="6846695f-d75e-4d5f-b069-469e33874f65" ParentLink="ServiceBody_Statement" LowerBound="24.1" HigherBound="30.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_pupd" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="6f891e5b-dfbe-4168-9c2c-cfd58637face" ParentLink="ComplexStatement_Statement" LowerBound="27.1" HigherBound="29.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.Rr_to_PortalLatestLog" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_pupd" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="b233dc72-3521-4079-9505-b925cafd8a7d" ParentLink="Transform_InputMessagePartRef" LowerBound="28.89" HigherBound="28.94">
+                            <om:Property Name="MessageRef" Value="RrLog" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="652ecf11-7b92-4dbe-bf24-b32c21d73728" ParentLink="Transform_OutputMessagePartRef" LowerBound="28.28" HigherBound="28.43">
+                            <om:Property Name="MessageRef" Value="PortalLogUpdate" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="2df27cbf-69be-4920-a28d-bb8ab87bf2cd" ParentLink="Construct_MessageRef" LowerBound="25.23" HigherBound="25.38">
+                        <om:Property Name="Ref" Value="PortalLogUpdate" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="8cdd1a45-e123-41a0-8c90-74c8a9a3a3d6" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="32.1">
+                    <om:Property Name="PortName" Value="SubmitPortalLatestLog" />
+                    <om:Property Name="MessageName" Value="PortalLogUpdate" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Pupd" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1110dd25-c535-43a3-8a7d-7ec1deae0a4b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.ReceiveRrWorkLogType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveRrWorkLog" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="fd842502-ef52-4a44-ac12-8aa0fbcc45dd" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="d444a58d-65f7-4962-af3d-297ba74bed50" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.SubmitLatestUpdateType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitPortalLatestLog" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="0f439667-014f-4926-b170-a8ed2a0fdba0" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    internal porttype ReceiveRrWorkLogType
+    {
+        oneway Operation_1
+        {
+            MTFM._1TEAM.Services.Schemas.RRMIWORKLOGService.PublishRRMIWORKLOG
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service RrLogs
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveRrWorkLogType ReceiveRrWorkLog;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SubmitLatestUpdateType SubmitPortalLatestLog;
+        message Schema.miworldcolleaguerequestupd PortalLogUpdate;
+        message MTFM._1TEAM.Services.Schemas.RRMIWORKLOGService.PublishRRMIWORKLOG RrLog;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("746e61fa-90c2-4f57-8bf1-f54bfeff5ad2")]
+            activate receive (ReceiveRrWorkLog.Operation_1, RrLog);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6846695f-d75e-4d5f-b069-469e33874f65")]
+            construct PortalLogUpdate
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("6f891e5b-dfbe-4168-9c2c-cfd58637face")]
+                transform (PortalLogUpdate) = IFM.MiRequest.Maps.Rr_to_PortalLatestLog (RrLog);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8cdd1a45-e123-41a0-8c90-74c8a9a3a3d6")]
+            send (SubmitPortalLatestLog.Operation_1, PortalLogUpdate);
+        }
+    }
+}
+

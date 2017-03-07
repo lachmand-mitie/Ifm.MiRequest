@@ -1,0 +1,315 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6f9a0e4e-9aff-4d72-84b3-411590adef45" LowerBound="1.1" HigherBound="68.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="06e10a6b-5ce2-42e5-87e3-5a826b44dc0c" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveRrStatusUpdType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2a0547f2-6b76-41e1-9efa-8979c09cdc2d" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="b03bae79-84f2-4b21-a872-bdff0dd04ef8" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.77">
+                    <om:Property Name="Ref" Value="MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="a965ae1c-3334-4ba4-996c-548aa75958e6" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="67.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="RrUpdates" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="2f642120-6edf-434c-9fce-48159fc4d9e4" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="InitialValue" Value="false" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendMwc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="7552ad8f-b9de-4cb8-a079-7b6b872ef3d1" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="InitialValue" Value="false" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendWorkflow" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6a35ab8c-f713-4e22-9857-9583650636cf" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.miworldcolleaguerequestupd" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PortalStatusUpdate" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="aa48dd8b-33d0-476c-97f5-7f027d93b0a3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RrUpd" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="db555ceb-5e85-4a26-a8b4-f7dc15f88d61" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.AdhocWorkflow" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AhocWorkflow" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="101c71e9-e9aa-44f8-a0dd-be7de8a26ab6" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="518120c6-1c4e-4dd0-9791-95c26b128941" ParentLink="ServiceBody_Statement" LowerBound="25.1" HigherBound="29.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveRrStatusUpd" />
+                    <om:Property Name="MessageName" Value="RrUpd" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Status_Chng" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="c54399b1-7953-44f2-b514-b655515b18f9" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="35.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructAhocWorkflow" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="c465e42f-e081-4902-870a-78c2b984ffcc" ParentLink="ComplexStatement_Statement" LowerBound="32.1" HigherBound="34.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.RrUpdateToAdhocWorkflow" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="TransformAdhocWorkflow" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="2fe43dd4-06f2-4951-9595-b32757a68bbb" ParentLink="Transform_InputMessagePartRef" LowerBound="33.88" HigherBound="33.93">
+                            <om:Property Name="MessageRef" Value="RrUpd" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="deb4b9da-6495-405e-b516-123917cad7c8" ParentLink="Transform_OutputMessagePartRef" LowerBound="33.28" HigherBound="33.40">
+                            <om:Property Name="MessageRef" Value="AhocWorkflow" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="46fd9e1a-dda2-4132-8b44-fb5486cf306a" ParentLink="Construct_MessageRef" LowerBound="30.23" HigherBound="30.35">
+                        <om:Property Name="Ref" Value="AhocWorkflow" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="1fee727a-4935-4a04-9917-c353ac8e07e1" ParentLink="ServiceBody_Statement" LowerBound="35.1" HigherBound="47.1">
+                    <om:Property Name="Expression" Value="if(AhocWorkflow.Routing.Source == &quot;MIREQUEST&quot;)&#xD;&#xA;{&#xD;&#xA;SendMwc = true;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;if(AhocWorkflow.Routing.WorkType == &quot;ADHOC&quot; &amp;&amp; AhocWorkflow.Routing.Status == &quot;ADHOC&quot; &amp;&amp; MFM.Colleague.Helper.AdhocWorkflowClient.EnableAdhoc() == true)&#xD;&#xA;{&#xD;&#xA;SendWorkflow = true;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Set Variables" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="7de82f1e-4a6c-4f90-8809-911ab92a0caa" ParentLink="ServiceBody_Statement" LowerBound="47.1" HigherBound="59.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send MWC" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="1dbfe6cf-efb9-4ab3-8f1e-b41b977bd907" ParentLink="ReallyComplexStatement_Branch" LowerBound="48.13" HigherBound="59.1">
+                        <om:Property Name="Expression" Value="SendMwc == true" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Yes" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="83a67987-5928-433c-9f84-4573a5741c80" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="56.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructPortalUpd" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="69db092f-9988-4a8a-a614-db486fb5290b" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="55.1">
+                                <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.Rr_ro_PortalStatus" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_PUpd" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="c386c879-af24-4009-960f-932b1f8e137e" ParentLink="Transform_InputMessagePartRef" LowerBound="54.93" HigherBound="54.98">
+                                    <om:Property Name="MessageRef" Value="RrUpd" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="3b0b330a-7e26-490f-ab97-cbfee2241f0d" ParentLink="Transform_OutputMessagePartRef" LowerBound="54.32" HigherBound="54.50">
+                                    <om:Property Name="MessageRef" Value="PortalStatusUpdate" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="3dabdbcc-29fe-4bbd-a69e-624d9b114ddf" ParentLink="Construct_MessageRef" LowerBound="51.27" HigherBound="51.45">
+                                <om:Property Name="Ref" Value="PortalStatusUpdate" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="b2cf1bee-c0e2-4464-96b6-3f3697282b91" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="58.1">
+                            <om:Property Name="PortName" Value="SubmitPortalHttpUpd" />
+                            <om:Property Name="MessageName" Value="PortalStatusUpdate" />
+                            <om:Property Name="OperationName" Value="Operation_1" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Pupd" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="264bee1b-2ee2-4432-8730-a70b0673b495" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="c6829723-202c-4f02-8555-85b2aff64852" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="65.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send ADHOC" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="ad6ba9c7-0702-4bae-a83a-fb249a5451be" ParentLink="ReallyComplexStatement_Branch" LowerBound="60.13" HigherBound="65.1">
+                        <om:Property Name="Expression" Value="SendWorkflow == true" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Yes" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Exec" OID="f4b9e7f6-ec49-415c-ab91-5af70a394b80" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="64.1">
+                            <om:Property Name="Invokee" Value="IFM.MiRequest.PostAdhocWorkflow" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="StartAdhocWorkflow" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Parameter" OID="0132e611-cc7f-41ae-b136-42f8686161fb" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="RrUpd" />
+                                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Parameter" OID="851b2af4-4eaf-438b-b8c7-52a9718aa626" ParentLink="InvokeStatement_Parameter">
+                                <om:Property Name="Direction" Value="In" />
+                                <om:Property Name="Name" Value="AhocWorkflow" />
+                                <om:Property Name="Type" Value="IFM.MiRequest.Schema.AdhocWorkflow" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="db403116-25c0-4f01-9870-3bccaf339cc2" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="b2ce77b7-1de1-423c-9cac-cc468aaa129b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.ReceiveRrStatusUpdType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveRrStatusUpd" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="bb4fa653-15ee-4fb4-b2e8-65d6987e6e66" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ceb7b316-39a8-409f-8139-fb64b31ce821" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="36" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.SubmitLatestUpdateType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitPortalHttpUpd" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="cfdc8d68-124f-4f4f-833a-fffd9fe68abd" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    internal porttype ReceiveRrStatusUpdType
+    {
+        oneway Operation_1
+        {
+            MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service RrUpdates
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveRrStatusUpdType ReceiveRrStatusUpd;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SubmitLatestUpdateType SubmitPortalHttpUpd;
+        message Schema.miworldcolleaguerequestupd PortalStatusUpdate;
+        message MTFM._1TEAM.Services.Schemas.RRMISRSTATService.PublishRRMISRSTAT RrUpd;
+        message Schema.AdhocWorkflow AhocWorkflow;
+        System.Boolean SendMwc;
+        System.Boolean SendWorkflow;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("518120c6-1c4e-4dd0-9791-95c26b128941")]
+            activate receive (ReceiveRrStatusUpd.Operation_1, RrUpd);
+            SendMwc = false;
+            SendWorkflow = false;
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c54399b1-7953-44f2-b514-b655515b18f9")]
+            construct AhocWorkflow
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c465e42f-e081-4902-870a-78c2b984ffcc")]
+                transform (AhocWorkflow) = IFM.MiRequest.Maps.RrUpdateToAdhocWorkflow (RrUpd);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1fee727a-4935-4a04-9917-c353ac8e07e1")]
+            if(AhocWorkflow.Routing.Source == "MIREQUEST")
+            {
+            SendMwc = true;
+            }
+            
+            if(AhocWorkflow.Routing.WorkType == "ADHOC" && AhocWorkflow.Routing.Status == "ADHOC" && MFM.Colleague.Helper.AdhocWorkflowClient.EnableAdhoc() == true)
+            {
+            SendWorkflow = true;
+            }
+            
+            
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7de82f1e-4a6c-4f90-8809-911ab92a0caa")]
+            if (SendMwc == true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("83a67987-5928-433c-9f84-4573a5741c80")]
+                construct PortalStatusUpdate
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("69db092f-9988-4a8a-a614-db486fb5290b")]
+                    transform (PortalStatusUpdate) = IFM.MiRequest.Maps.Rr_ro_PortalStatus (RrUpd);
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("b2cf1bee-c0e2-4464-96b6-3f3697282b91")]
+                send (SubmitPortalHttpUpd.Operation_1, PortalStatusUpdate);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c6829723-202c-4f02-8555-85b2aff64852")]
+            if (SendWorkflow == true)
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("f4b9e7f6-ec49-415c-ab91-5af70a394b80")]
+                exec IFM.MiRequest.PostAdhocWorkflow (RrUpd, AhocWorkflow);
+            }
+        }
+    }
+}
+

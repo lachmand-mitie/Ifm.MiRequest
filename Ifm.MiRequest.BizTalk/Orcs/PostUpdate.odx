@@ -1,0 +1,448 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="264d4d2e-6c18-437f-89f6-20d286d543f4" LowerBound="1.1" HigherBound="94.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="89ba0cf1-9148-4a6c-8bcb-8e8d623f3e2d" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveUpdRequestType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="bad463b0-c53a-4f79-a6c0-4537ec7208c5" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AddUpdate" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="1609fd03-b0bd-4788-86e9-cd465c717e50" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.48">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.TaskUpdate.TaskUpdateRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="151f5bed-031c-45c9-a256-8d10743bb317" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.50" HigherBound="8.86">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.TaskUpdate.TaskUpdateResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1d49b5af-d45f-46f8-93fc-4b1760336092" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="93.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PostUpdate" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="2cc902b3-6f29-4029-b0c4-21da78c79fac" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResultCode" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="29747ac5-14fb-466e-9cdf-b58a5d6e33f2" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MessageText" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6d183af3-3daa-4111-a213-eb5aa173374e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="rrUpdateStatus" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="45e925fc-be05-456a-bacd-499b0b8d133f" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskUpdate.TaskUpdateResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="DummyResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="5ddd509b-e8be-4760-9f75-36fc30fae6ed" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskUpdate.TaskUpdateResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateLogResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="f6d7d6e5-6996-419e-baa4-4e2997cd57a0" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskUpdate.TaskUpdateRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="UpdateLog" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="9d438f31-8fd3-49aa-bb55-747c7219e88e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="rrAddWorkLog" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="63e8cda2-3916-4a3d-969e-53e416dba7e4" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.MitieRrUpdateResp" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="rrUpdateStatusResp" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="f6300f46-583e-4e1d-94f7-57a1ce7c5528" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="88efae80-2396-4e89-95f9-012f5d9d439c" ParentLink="ServiceBody_Statement" LowerBound="26.1" HigherBound="30.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveUpdRequest" />
+                    <om:Property Name="MessageName" Value="UpdateLog" />
+                    <om:Property Name="OperationName" Value="AddUpdate" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Upd" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="51360d14-fcdd-4ae8-ae0d-44f0cffd80ce" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.Operation" />
+                        <om:Property Name="RHS" Value="&quot;AddUpdate&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="6a55adde-ae7e-4167-9162-076b28c1b873" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="36.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructDummy" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="580f9e53-ef18-4a9b-85ba-678cac1dc447" ParentLink="ComplexStatement_Statement" LowerBound="33.1" HigherBound="35.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.RequestUpdateDummyResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_Dummy" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="36af66f7-8f23-4f70-a89e-8f546478ac6f" ParentLink="Transform_InputMessagePartRef" LowerBound="34.92" HigherBound="34.101">
+                            <om:Property Name="MessageRef" Value="UpdateLog" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="4b0f6aa0-5647-45b2-93bb-08fc19dc0e40" ParentLink="Transform_OutputMessagePartRef" LowerBound="34.28" HigherBound="34.41">
+                            <om:Property Name="MessageRef" Value="DummyResponse" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="a08fdaf9-1c6e-48a4-b94a-9f14d4e186f3" ParentLink="Construct_MessageRef" LowerBound="31.23" HigherBound="31.36">
+                        <om:Property Name="Ref" Value="DummyResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="dc473ae8-6b9b-4036-997d-ed1dc2b2cfa9" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="81.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Provider" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="d90f571c-4bba-4b07-a628-62b64239e4b0" ParentLink="ReallyComplexStatement_Branch" LowerBound="37.13" HigherBound="75.1">
+                        <om:Property Name="Expression" Value="UpdateLog.Provider == &quot;1TEAM&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="1TEAM" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="Decision" OID="0525ec6a-4bf5-4325-9647-278ad53c6d8b" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="74.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="UpdClass" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="bcf7a59e-cb23-4817-9453-c6d1c7495376" ParentLink="ReallyComplexStatement_Branch" LowerBound="40.17" HigherBound="54.1">
+                                <om:Property Name="Expression" Value="UpdateLog.TaskUpdate.Class == &quot;LOG&quot;" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="LOG Type" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="Construct" OID="f5102667-5521-47c5-bda1-a769896802f7" ParentLink="ComplexStatement_Statement" LowerBound="42.1" HigherBound="48.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ConstructRrWorklog" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Transform" OID="d569f9e7-9e8a-4181-b439-8cf98d697922" ParentLink="ComplexStatement_Statement" LowerBound="45.1" HigherBound="47.1">
+                                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.TaskUpdateRequestToRrCreateUpdate" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="TransformRrWorklog" />
+                                        <om:Property Name="Signal" Value="False" />
+                                        <om:Element Type="MessagePartRef" OID="dec9984c-2c40-4e67-8c46-c981add9ff60" ParentLink="Transform_InputMessagePartRef" LowerBound="46.117" HigherBound="46.126">
+                                            <om:Property Name="MessageRef" Value="UpdateLog" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="4e1fc32d-3b75-4227-8fa5-4d5e38082977" ParentLink="Transform_OutputMessagePartRef" LowerBound="46.36" HigherBound="46.59">
+                                            <om:Property Name="MessageRef" Value="rrAddWorkLog" />
+                                            <om:Property Name="PartRef" Value="parameters" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="MessageRef" OID="e8fa1c28-e9f7-4cdb-aca4-566ab047f21c" ParentLink="Construct_MessageRef" LowerBound="43.31" HigherBound="43.43">
+                                        <om:Property Name="Ref" Value="rrAddWorkLog" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Call" OID="9b90e182-2594-4bc1-b85d-4dcfae0aed14" ParentLink="ComplexStatement_Statement" LowerBound="48.1" HigherBound="50.1">
+                                    <om:Property Name="Identifier" Value="SubmitLog" />
+                                    <om:Property Name="Invokee" Value="MTFM._1TEAM.Services.AddRrSrWorklog" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="SubmitLog" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Parameter" OID="07a4cb7a-e35b-425f-8ea0-7091ff3500e3" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="rrAddWorkLog" />
+                                        <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Parameter" OID="0c56a34e-98c3-48b0-96c5-a0c7cf4db11d" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="Out" />
+                                        <om:Property Name="Name" Value="rrUpdateStatusResp" />
+                                        <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.MitieRrUpdateResp" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="d6102f16-2695-49a9-bf60-d69f0cfaf0cd" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="53.1">
+                                    <om:Property Name="Expression" Value="ResultCode = rrUpdateStatusResp.resultCode;&#xD;&#xA;MessageText = rrUpdateStatusResp.messageText;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set_Submitted" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="672eca7d-a99f-4800-818f-97bc26edee93" ParentLink="ReallyComplexStatement_Branch" LowerBound="54.22" HigherBound="68.1">
+                                <om:Property Name="Expression" Value="UpdateLog.TaskUpdate.Class == &quot;STATUS&quot;" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="STATUS Type" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Construct" OID="b6112e17-04ee-4fb9-b538-2c6e21d73948" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="62.1">
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="ConstructRrUpdateStatus" />
+                                    <om:Property Name="Signal" Value="True" />
+                                    <om:Element Type="Transform" OID="3a72374e-3980-4b8e-a652-2a4e3b4a4591" ParentLink="ComplexStatement_Statement" LowerBound="59.1" HigherBound="61.1">
+                                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.TaskUpdateRequestToRrStatusUpdate" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Name" Value="TransformRrUpdateStatus" />
+                                        <om:Property Name="Signal" Value="False" />
+                                        <om:Element Type="MessagePartRef" OID="f560c3ba-35b0-4a43-a6fd-4d8bea921fa1" ParentLink="Transform_InputMessagePartRef" LowerBound="60.119" HigherBound="60.128">
+                                            <om:Property Name="MessageRef" Value="UpdateLog" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_5" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                        <om:Element Type="MessagePartRef" OID="8c76b3e9-6c05-4de0-8de7-ad1217beab70" ParentLink="Transform_OutputMessagePartRef" LowerBound="60.36" HigherBound="60.61">
+                                            <om:Property Name="MessageRef" Value="rrUpdateStatus" />
+                                            <om:Property Name="PartRef" Value="parameters" />
+                                            <om:Property Name="ReportToAnalyst" Value="True" />
+                                            <om:Property Name="Name" Value="MessagePartReference_6" />
+                                            <om:Property Name="Signal" Value="False" />
+                                        </om:Element>
+                                    </om:Element>
+                                    <om:Element Type="MessageRef" OID="31979459-bfef-46e7-abf6-f66108c4678d" ParentLink="Construct_MessageRef" LowerBound="57.31" HigherBound="57.45">
+                                        <om:Property Name="Ref" Value="rrUpdateStatus" />
+                                        <om:Property Name="ReportToAnalyst" Value="True" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="Call" OID="f8511f49-b7a1-47f6-b976-1e1e11f5b2f1" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="64.1">
+                                    <om:Property Name="Identifier" Value="SubmitStatusChange" />
+                                    <om:Property Name="Invokee" Value="MTFM._1TEAM.Services.AddRrSrWorklog" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="SubmitStatusChange" />
+                                    <om:Property Name="Signal" Value="False" />
+                                    <om:Element Type="Parameter" OID="22973a67-8575-4be0-90dc-8309b4101106" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="In" />
+                                        <om:Property Name="Name" Value="rrUpdateStatus" />
+                                        <om:Property Name="Type" Value="MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                    <om:Element Type="Parameter" OID="607aae1a-8069-4c33-8556-184db9cd616d" ParentLink="InvokeStatement_Parameter">
+                                        <om:Property Name="Direction" Value="Out" />
+                                        <om:Property Name="Name" Value="rrUpdateStatusResp" />
+                                        <om:Property Name="Type" Value="MTFM._1TEAM.Services.Schemas.MitieRrUpdateResp" />
+                                        <om:Property Name="Signal" Value="False" />
+                                    </om:Element>
+                                </om:Element>
+                                <om:Element Type="VariableAssignment" OID="79565669-ece8-40a0-adfc-fec76a9203e3" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="67.1">
+                                    <om:Property Name="Expression" Value="ResultCode = rrUpdateStatusResp.resultCode;&#xD;&#xA;MessageText = rrUpdateStatusResp.messageText;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set_Submitted" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="6b9b7321-8457-4bc1-8fca-08c9e965066b" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="VariableAssignment" OID="24b6e381-2c82-4262-aa07-1e38245da619" ParentLink="ComplexStatement_Statement" LowerBound="70.1" HigherBound="73.1">
+                                    <om:Property Name="Expression" Value="ResultCode = &quot;-2&quot;;&#xD;&#xA;MessageText = &quot;This update &quot; + UpdateLog.TaskUpdate.Class + &quot;) is not available for  (&quot; + UpdateLog.Provider + &quot;)&quot;;" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="Set_Fails_updclass" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="e25d30eb-b726-4324-828b-ed11e21bc82a" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="VariableAssignment" OID="bea5d3b6-354a-461a-a4f1-94847e936b69" ParentLink="ComplexStatement_Statement" LowerBound="77.1" HigherBound="80.1">
+                            <om:Property Name="Expression" Value="ResultCode = &quot;-1&quot;;&#xD;&#xA;MessageText = &quot;This provider is not available (&quot; + UpdateLog.Provider + &quot;)&quot;;" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Set_Fails_provider" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="6c104fbc-6675-4e88-a0ab-855cb3af3abf" ParentLink="ServiceBody_Statement" LowerBound="81.1" HigherBound="89.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="13060b3f-a376-4c7d-af37-c5652d33eaae" ParentLink="ComplexStatement_Statement" LowerBound="84.1" HigherBound="88.1">
+                        <om:Property Name="Expression" Value="UpdateLogResponse = DummyResponse;&#xD;&#xA;UpdateLogResponse.ResultCode = ResultCode;&#xD;&#xA;UpdateLogResponse.MessageText = MessageText;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="AssignResponse" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="ff8d38e1-1ba6-4278-a576-80c4632c35e1" ParentLink="Construct_MessageRef" LowerBound="82.23" HigherBound="82.40">
+                        <om:Property Name="Ref" Value="UpdateLogResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="f8a4c80f-cd08-4c3d-a70e-77e3acecc44b" ParentLink="ServiceBody_Statement" LowerBound="89.1" HigherBound="91.1">
+                    <om:Property Name="PortName" Value="ReceiveUpdRequest" />
+                    <om:Property Name="MessageName" Value="UpdateLogResponse" />
+                    <om:Property Name="OperationName" Value="AddUpdate" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Upd" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="258db878-c064-4aba-ac6e-11d845b6754f" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="23" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.ReceiveUpdRequestType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveUpdRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="90b9fc8b-dc99-47e5-8c80-534efba723fc" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    public porttype ReceiveUpdRequestType
+    {
+        requestresponse AddUpdate
+        {
+            Schema.TaskUpdate.TaskUpdateRequest, Schema.TaskUpdate.TaskUpdateResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PostUpdate
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveUpdRequestType ReceiveUpdRequest;
+        message MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest rrUpdateStatus;
+        message Schema.TaskUpdate.TaskUpdateResponse DummyResponse;
+        message Schema.TaskUpdate.TaskUpdateResponse UpdateLogResponse;
+        message Schema.TaskUpdate.TaskUpdateRequest UpdateLog;
+        message MTFM._1TEAM.Services.GeneratedItems.RRMISR.UpdateRRMISRRequest rrAddWorkLog;
+        message MTFM._1TEAM.Services.Schemas.MitieRrUpdateResp rrUpdateStatusResp;
+        System.String ResultCode;
+        System.String MessageText;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("88efae80-2396-4e89-95f9-012f5d9d439c")]
+            activate ((BTS.Operation == "AddUpdate"))receive (ReceiveUpdRequest.AddUpdate, UpdateLog);
+            ResultCode = "";
+            MessageText = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6a55adde-ae7e-4167-9162-076b28c1b873")]
+            construct DummyResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("580f9e53-ef18-4a9b-85ba-678cac1dc447")]
+                transform (DummyResponse) = IFM.MiRequest.Maps.RequestUpdateDummyResponse (UpdateLog);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("dc473ae8-6b9b-4036-997d-ed1dc2b2cfa9")]
+            if (UpdateLog.Provider == "1TEAM")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("0525ec6a-4bf5-4325-9647-278ad53c6d8b")]
+                if (UpdateLog.TaskUpdate.Class == "LOG")
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("f5102667-5521-47c5-bda1-a769896802f7")]
+                    construct rrAddWorkLog
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("d569f9e7-9e8a-4181-b439-8cf98d697922")]
+                        transform (rrAddWorkLog.parameters) = IFM.MiRequest.Maps.TaskUpdateRequestToRrCreateUpdate (UpdateLog);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9b90e182-2594-4bc1-b85d-4dcfae0aed14")]
+                    call MTFM._1TEAM.Services.AddRrSrWorklog (rrAddWorkLog, out rrUpdateStatusResp);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("d6102f16-2695-49a9-bf60-d69f0cfaf0cd")]
+                    ResultCode = rrUpdateStatusResp.resultCode;
+                    MessageText = rrUpdateStatusResp.messageText;
+                }
+                else if (UpdateLog.TaskUpdate.Class == "STATUS")
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b6112e17-04ee-4fb9-b538-2c6e21d73948")]
+                    construct rrUpdateStatus
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("3a72374e-3980-4b8e-a652-2a4e3b4a4591")]
+                        transform (rrUpdateStatus.parameters) = IFM.MiRequest.Maps.TaskUpdateRequestToRrStatusUpdate (UpdateLog);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("f8511f49-b7a1-47f6-b976-1e1e11f5b2f1")]
+                    call MTFM._1TEAM.Services.AddRrSrWorklog (rrUpdateStatus, out rrUpdateStatusResp);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("79565669-ece8-40a0-adfc-fec76a9203e3")]
+                    ResultCode = rrUpdateStatusResp.resultCode;
+                    MessageText = rrUpdateStatusResp.messageText;
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("24b6e381-2c82-4262-aa07-1e38245da619")]
+                    ResultCode = "-2";
+                    MessageText = "This update " + UpdateLog.TaskUpdate.Class + ") is not available for  (" + UpdateLog.Provider + ")";
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("bea5d3b6-354a-461a-a4f1-94847e936b69")]
+                ResultCode = "-1";
+                MessageText = "This provider is not available (" + UpdateLog.Provider + ")";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6c104fbc-6675-4e88-a0ab-855cb3af3abf")]
+            construct UpdateLogResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("13060b3f-a376-4c7d-af37-c5652d33eaae")]
+                UpdateLogResponse = DummyResponse;
+                UpdateLogResponse.ResultCode = ResultCode;
+                UpdateLogResponse.MessageText = MessageText;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("f8a4c80f-cd08-4c3d-a70e-77e3acecc44b")]
+            send (ReceiveUpdRequest.AddUpdate, UpdateLogResponse);
+        }
+    }
+}
+

@@ -1,0 +1,319 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ca93437b-2db7-402e-922a-8c27f7e779a8" LowerBound="1.1" HigherBound="64.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="IFM.MiRequest" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="2fecd67d-3217-4fda-a460-2484802b1822" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CreateRequestMaximoType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="d5dd01b0-6d8a-4dfa-bfde-0ec7101783c3" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateOrderMaximo" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="ca28827a-b368-43d8-81f2-6cb9e1f2e98a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.46">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="2482d88f-3e44-4c29-86f9-e7070ee2afcd" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.48" HigherBound="8.82">
+                    <om:Property Name="Ref" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="1b409194-8a9e-49f4-add4-9916180d0ded" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PublishPortalMxoWoRequestType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b6be86da-7581-47a2-85ae-dc0cb86ee26f" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="15fdfca6-4ee4-4ddb-be3a-1b75e46698ab" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.102">
+                    <om:Property Name="Ref" Value="MTFM.MiAMI.Services.GeneratedItems.MTFMCONCEPTWOIN_www_ibm_com_maximo.SyncMTFMCONCEPTWOIN" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="5e020872-de26-48aa-810b-7cbb6fc0baf4" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="63.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PutTask" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="c3d4001e-eae5-4bca-99d8-6a7cdb6d2098" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RequestDoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="5a2e2d10-e7f0-4ffa-a371-605e1a211e39" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="InitialValue" Value="true" />
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Boolean" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="result" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="169a7d40-caa6-4600-8d6c-8ee23ba4e5e0" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="MFM.Colleague.Helper.MiRequestOrderResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ResponseObj" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="12222c65-a9c8-472d-ab99-b6a3908c0479" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TaskRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fe4b4ae1-04e3-47ae-8e66-b5eb1356b895" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="IFM.MiRequest.Schema.TaskLoader.TaskLoadResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TaskResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="87651757-7671-4d86-8ca4-af6f4e56974c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="MTFM.MiAMI.Services.GeneratedItems.MTFMCONCEPTWOIN_www_ibm_com_maximo.SyncMTFMCONCEPTWOIN" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MxoCreateOrder" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="f4111f00-3016-49dc-91c7-c2c456d4219f" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="fd26ba5a-4a7b-4961-bfc7-5dd12b54c7b0" ParentLink="ServiceBody_Statement" LowerBound="33.1" HigherBound="38.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="CreateRequest" />
+                    <om:Property Name="MessageName" Value="TaskRequest" />
+                    <om:Property Name="OperationName" Value="CreateOrderMaximo" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="6a608840-6cd8-4ce0-b74b-018d1fc8d94a" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTS.Operation" />
+                        <om:Property Name="RHS" Value="&quot;CreateOrderMaximo&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="f581056b-8e3e-4704-b74d-6ba2645638fe" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="IFM.MiRequest.Schema.Task_Provider" />
+                        <om:Property Name="RHS" Value="&quot;MiAMI&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="a5007710-5bad-4cd7-ba66-41de01cd7ee6" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="44.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructWoRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="5383d7c7-8f2c-47d1-b316-65a82eb84c7e" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="43.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.TaskRequest_To_MiamiCreateOrder" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_WoRequest" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="76c8a1e3-14a0-49a3-8fd0-b75883025436" ParentLink="Transform_InputMessagePartRef" LowerBound="42.98" HigherBound="42.109">
+                            <om:Property Name="MessageRef" Value="TaskRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="ea771401-c3d9-483e-8ead-8fe7855000f1" ParentLink="Transform_OutputMessagePartRef" LowerBound="42.28" HigherBound="42.42">
+                            <om:Property Name="MessageRef" Value="MxoCreateOrder" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="688f6f14-9f6a-4095-b323-f32a75cdc681" ParentLink="Construct_MessageRef" LowerBound="39.23" HigherBound="39.37">
+                        <om:Property Name="Ref" Value="MxoCreateOrder" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="713af45b-25bf-47de-ae94-4d30e313d000" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="46.1">
+                    <om:Property Name="PortName" Value="PublishPortalMxoWoRequest" />
+                    <om:Property Name="MessageName" Value="MxoCreateOrder" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="PublishWoRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="88c38f79-bbbd-40e2-920d-91ab01ee66fc" ParentLink="ServiceBody_Statement" LowerBound="46.1" HigherBound="49.1">
+                    <om:Property Name="Expression" Value="RequestDoc = TaskRequest;&#xD;&#xA;ResponseObj = MFM.Colleague.Helper.MiRequestMaximoClient.SubmitNewWorkorder(RequestDoc);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SubmitSoapToMaximo" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="89935df4-d40f-4005-8cee-bd5d16bb4b2e" ParentLink="ServiceBody_Statement" LowerBound="49.1" HigherBound="59.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="c309b39a-5790-43c2-a333-ad7ac846b8da" ParentLink="ComplexStatement_Statement" LowerBound="52.1" HigherBound="54.1">
+                        <om:Property Name="ClassName" Value="IFM.MiRequest.Maps.Dummy_MaximoResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Get_Dummy" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="aa62d152-450d-42ed-a5dc-deb68d10c63a" ParentLink="Transform_InputMessagePartRef" LowerBound="53.85" HigherBound="53.96">
+                            <om:Property Name="MessageRef" Value="TaskRequest" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="f819c3a0-8af8-4c4e-911a-62e4796b525f" ParentLink="Transform_OutputMessagePartRef" LowerBound="53.28" HigherBound="53.40">
+                            <om:Property Name="MessageRef" Value="TaskResponse" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="1d0fe120-b73e-45bd-abd3-279ebed74fa0" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="58.1">
+                        <om:Property Name="Expression" Value="xpath(TaskResponse,&quot;/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ResultCode' and namespace-uri()='']&quot;) = ResponseObj.ResultCode;&#xD;&#xA;xpath(TaskResponse,&quot;/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='Message' and namespace-uri()='']&quot;) = ResponseObj.Message;&#xD;&#xA;xpath(TaskResponse,&quot;/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ProviderRef' and namespace-uri()='']&quot;) = ResponseObj.ProviderRef;&#xD;&#xA;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="LoadResult" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="6d55ac48-d55e-4eb2-b810-5ed08cd17e63" ParentLink="Construct_MessageRef" LowerBound="50.23" HigherBound="50.35">
+                        <om:Property Name="Ref" Value="TaskResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="1a30a618-44bd-40b1-904d-f7e0baf2a550" ParentLink="ServiceBody_Statement" LowerBound="59.1" HigherBound="61.1">
+                    <om:Property Name="PortName" Value="CreateRequest" />
+                    <om:Property Name="MessageName" Value="TaskResponse" />
+                    <om:Property Name="OperationName" Value="CreateOrderMaximo" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="2f3e45b2-7b03-470a-929b-1aeae36d6c17" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.CreateRequestMaximoType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CreateRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="3eae59e6-93cb-436c-bcbe-fd37a6e8cea0" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e8a461f2-824f-4c0d-bbaa-19020b1641a1" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="16" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="IFM.MiRequest.PublishPortalMxoWoRequestType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PublishPortalMxoWoRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="12dd97de-212f-4174-9a65-c2a5e33fa2a5" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module IFM.MiRequest
+{
+    public porttype CreateRequestMaximoType
+    {
+        requestresponse CreateOrderMaximo
+        {
+            Schema.TaskLoader.TaskLoadRequest, Schema.TaskLoader.TaskLoadResponse
+        };
+    };
+    internal porttype PublishPortalMxoWoRequestType
+    {
+        oneway Operation_1
+        {
+            MTFM.MiAMI.Services.GeneratedItems.MTFMCONCEPTWOIN_www_ibm_com_maximo.SyncMTFMCONCEPTWOIN
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service PutTask
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements CreateRequestMaximoType CreateRequest;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PublishPortalMxoWoRequestType PublishPortalMxoWoRequest;
+        message Schema.TaskLoader.TaskLoadRequest TaskRequest;
+        message Schema.TaskLoader.TaskLoadResponse TaskResponse;
+        message MTFM.MiAMI.Services.GeneratedItems.MTFMCONCEPTWOIN_www_ibm_com_maximo.SyncMTFMCONCEPTWOIN MxoCreateOrder;
+        System.Xml.XmlDocument RequestDoc;
+        System.Boolean result;
+        MFM.Colleague.Helper.MiRequestOrderResponse ResponseObj;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fd26ba5a-4a7b-4961-bfc7-5dd12b54c7b0")]
+            activate ((BTS.Operation == "CreateOrderMaximo") && (IFM.MiRequest.Schema.Task_Provider == "MiAMI"))receive (CreateRequest.CreateOrderMaximo, TaskRequest);
+            RequestDoc = new System.Xml.XmlDocument();
+            result = true;
+            ResponseObj = new MFM.Colleague.Helper.MiRequestOrderResponse();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a5007710-5bad-4cd7-ba66-41de01cd7ee6")]
+            construct MxoCreateOrder
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5383d7c7-8f2c-47d1-b316-65a82eb84c7e")]
+                transform (MxoCreateOrder) = IFM.MiRequest.Maps.TaskRequest_To_MiamiCreateOrder (TaskRequest);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("713af45b-25bf-47de-ae94-4d30e313d000")]
+            send (PublishPortalMxoWoRequest.Operation_1, MxoCreateOrder);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("88c38f79-bbbd-40e2-920d-91ab01ee66fc")]
+            RequestDoc = TaskRequest;
+            ResponseObj = MFM.Colleague.Helper.MiRequestMaximoClient.SubmitNewWorkorder(RequestDoc);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("89935df4-d40f-4005-8cee-bd5d16bb4b2e")]
+            construct TaskResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c309b39a-5790-43c2-a333-ad7ac846b8da")]
+                transform (TaskResponse) = IFM.MiRequest.Maps.Dummy_MaximoResponse (TaskRequest);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1d0fe120-b73e-45bd-abd3-279ebed74fa0")]
+                xpath(TaskResponse,"/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ResultCode' and namespace-uri()='']") = ResponseObj.ResultCode;
+                xpath(TaskResponse,"/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='Message' and namespace-uri()='']") = ResponseObj.Message;
+                xpath(TaskResponse,"/*[local-name()='TaskLoadResponse' and namespace-uri()='https://IFM.MiRequest.TaskLoader']/*[local-name()='ProviderRef' and namespace-uri()='']") = ResponseObj.ProviderRef;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1a30a618-44bd-40b1-904d-f7e0baf2a550")]
+            send (CreateRequest.CreateOrderMaximo, TaskResponse);
+        }
+    }
+}
+
